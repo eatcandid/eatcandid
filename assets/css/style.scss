@@ -1,0 +1,372 @@
+//FONTS
+@font-face {
+	font-family: 'Cooper Light';
+	font-weight: 300;
+	font-style: normal;
+	src: url(/assets/fonts/39E198_0_0.woff2?#iefix) format("woff2"),url(/assets/fonts/39E198_0_0.woff) format("woff"),url(/assets/fonts/39E198_0_0.ttf) format("truetype");
+}
+@font-face {
+	font-family: 'Founders Grotesk';
+	font-weight: 100;
+	font-style: normal;
+	src: url(/assets/fonts/FoundersGroteskWeb-Light.woff2?#iefix) format("woff2"),url(/assets/fonts/FoundersGroteskWeb-Light.woff) format("woff"),url(/assets/fonts/FoundersGroteskWeb-Light.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: 'Founders Grotesk';
+	font-weight: 300;
+	font-style: normal;
+	src: url(/assets/fonts/FoundersGroteskWeb-Regular.woff2?#iefix) format("woff2"),url(/assets/fonts/FoundersGroteskWeb-Regular.woff) format("woff"),url(/assets/fonts/FoundersGroteskWeb-Regular.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: 'Founders Grotesk';
+	font-weight: 500;
+	font-style: normal;
+	src: url(/assets/fonts/FoundersGroteskWeb-Medium.woff2?#iefix) format("woff2"),url(/assets/fonts/FoundersGroteskWeb-Medium.woff) format("woff"),url(/assets/fonts/FoundersGroteskWeb-Medium.ttf) format("truetype");
+}
+
+
+// STYLE COLORS
+
+$cacao: #1A1108;
+$driftwood: #A0724D;
+$seashell: #F5F5F3;
+$royalpalm: #0E3220;
+
+// SKU COLORS
+
+$mango: #FBBA91;
+$pineapple: #C7BBEB;
+$berry: #EBCECD;
+$banana: #FFE480;
+
+
+// SPACES and SIZES
+$gutter: 1rem;
+$gutter-large: 6rem;
+$pad: .5rem;
+
+$size-m: 1.8rem;
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+	font-family: 'Founders Grotesk', sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+	letter-spacing: .5px;
+	background: $seashell;
+	color: $cacao;
+}
+
+a{
+	color: $cacao;
+	text-decoration: none;
+}
+
+
+img{
+	width: 100%;
+}
+
+header{
+	margin: $gutter;
+	margin-bottom: 0;
+	padding: $pad 0;
+	border-bottom: 1px solid $cacao;
+	.logo{
+		display: inline-block;
+		svg a{
+			fill: $cacao;
+		}
+	}
+}
+
+.logo svg{
+	width: 100px;
+}
+
+nav{
+	display: inline-block;
+	@extend %subhead;
+	float: right;
+
+	ul.menu{
+
+		display: flex;
+		list-style-type: none;
+	}
+
+	li{
+		padding-left: $gutter;
+	}
+}
+
+.flex{
+	display: flex;
+	.flex-item{
+		flex: 1;
+		margin-right: $gutter-large;
+	}
+	.flex-item:last-child{
+		margin-right: 0;
+	}
+}
+
+section{
+	min-height: 100vh;
+	width: 100vw;
+	padding: $gutter-large 0;
+	position: relative;
+}
+
+.content{
+	max-width: 900px;
+	margin: auto;
+	position: relative;
+	z-index: 10;
+
+}
+
+%headline{
+	font-family: 'Cooper Light', serif;
+}
+
+%subhead{
+	font-family: 'Founders Grotesk', sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+
+h1,h2{
+	@extend %headline;
+	font-weight: 100;
+	line-height: 1.1;
+	text-transform: uppercase;
+	.sans{
+		font-family: "Founders Grotesk";
+		font-weight: 100;
+		display: block;
+		font-size: 8rem;
+		line-height: .9;
+	}
+}
+
+
+h1{
+	font-size: 7rem;
+}
+
+h2{
+	font-size: 4rem;
+	.sans{
+		font-size: 4.6rem;
+	}
+}
+
+h3{
+	@extend %subhead;
+	margin-bottom: $gutter;
+}
+
+.centered{
+	text-align: center;
+	margin: $gutter auto;
+}
+
+.summary{
+	// @extend %headline;
+	letter-spacing: 0px;
+	font-size: $size-m;
+	max-width: 25em;
+	margin-bottom: $gutter-large;
+}
+
+p{
+	margin-bottom: $gutter;
+}
+
+.button{
+	background: $royalpalm;
+	color: $seashell;
+	padding: $pad;
+	border-radius: 5px;
+	width: 150px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1px;
+	font-size: $size-m;
+	margin-top: 3rem;
+}
+
+.button:hover{
+	cursor: pointer;
+	box-shadow: 10px 10px 0px 0px rgba($royalpalm,0.5);
+}
+
+.image-placeholder{
+	width: 100%;
+	height: 300px;
+	background: $driftwood;
+	margin-bottom: $gutter;
+	border-radius: 5px;
+}
+
+
+#intro {
+	padding-top: 200px;
+
+	h2, p{
+		text-align: left;
+	}
+
+	.button{
+		margin-left: 0;
+	}
+
+}
+
+.product{
+	// background-repeat: no-repeat;
+	// background-blend-mode: multiply;
+	// background-position: right center;
+	// background-size: contain;
+	position: relative;
+
+	.content{
+		h2, p{
+			width: 50%;
+		}
+	}
+}
+
+.product-img{
+	position: absolute;
+	left: 50px;
+	top: 50%;
+	width: 300px;
+	transform: rotate(-20deg);
+}
+
+.rightalign{
+	.content{
+		padding-left: 40%;
+		h2, p{
+			width: 100%;
+		}
+	}
+}
+
+.scene{
+	height: 100%;
+	width: 100vw;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	.left, .right{
+		height: 120%;
+		width: auto;
+	}
+
+	.left{
+		float: left;
+	}
+
+	.right{
+		float: right;
+	}
+
+}
+
+.scene.fixed{
+	position: fixed;
+}
+
+.noon-img{
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	width: 300px;
+}
+
+#goldenberry {
+	z-index: 0;
+	background-color: $berry;
+	.noon-img{
+		left: 10%;
+	}
+	.product-img{
+		right: 50px;
+		left: auto;
+		transform: rotate(20deg);
+	}
+	.button:hover{
+		box-shadow: 10px 10px 0px 0px rgba(148, 111, 84, 1);
+	}
+	// background-image: url(/assets/images/backgrounds/gb_r.png);
+}
+
+#banana {
+	background: $banana;
+	.button:hover{
+		box-shadow: 10px 10px 0px 0px rgba(190, 121, 0, 1);
+	}
+
+}
+
+#mango {
+	background: $mango;
+	.noon-img{
+		left: 10%;
+	}
+	.product-img{
+		right: 50px;
+		left: auto;
+		transform: rotate(50deg);
+	}
+	.button:hover{
+		box-shadow: 10px 10px 0px 0px rgba(155, 82, 23, 1);
+	}
+}
+
+#pineapple {
+	background: $pineapple;
+	.button:hover{
+		box-shadow: 10px 10px 0px 0px rgba(137, 115, 178, 1);
+	}
+}
+
+#about h2{
+	text-align: center;
+}
+
+
+footer{
+	margin-top: $gutter-large;
+	background: $cacao;
+	color: $seashell;
+	padding: $gutter;
+	overflow: auto;
+
+	svg .a{fill: $seashell;}
+}
+
+.seal{
+	width: 200px;
+	float: right;
+	padding: 1.5rem;
+}
