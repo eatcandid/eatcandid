@@ -124,7 +124,7 @@ nav{
 }
 
 section{
-	min-height: 110vh;
+	min-height: 100vh;
 	width: 100vw;
 	padding: $gutter-large 0;
 	position: relative;
@@ -268,7 +268,7 @@ p{
 
 .rightalign{
 	.content{
-		padding-left: 40%;
+		padding-left: 30%;
 		h2, p{
 			width: 100%;
 		}
@@ -284,7 +284,7 @@ p{
 	left: 0;
 	z-index: 0;
 	.left, .right{
-		height: 160vh;
+		height: 100vh;
 		width: auto;
 	}
 
@@ -338,6 +338,10 @@ p{
 	background: $banana;
 	$banana-shadow: rgb(190, 121, 0);
 
+	.product-img{
+		left: 20%;
+		right: auto;
+	}
 	.button:hover{
 		box-shadow: 10px 10px 0px 0px $banana-shadow;
 	}
