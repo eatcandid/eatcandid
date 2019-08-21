@@ -124,7 +124,7 @@ nav{
 }
 
 section{
-	min-height: 100vh;
+	min-height: 130vh;
 	width: 100vw;
 	padding: $gutter-large 0;
 	position: relative;
@@ -153,7 +153,7 @@ section{
 h1,h2{
 	@extend %headline;
 	font-weight: 100;
-	line-height: 1.1;
+	line-height: 1;
 	text-transform: uppercase;
 	.sans{
 		font-family: "Founders Grotesk";
@@ -236,6 +236,12 @@ p{
 		margin-left: 0;
 	}
 
+	.noon-img{
+		top: 30%;
+	}
+
+	min-height: 100vh;
+
 }
 
 .product{
@@ -278,7 +284,7 @@ p{
 	left: 0;
 	z-index: 0;
 	.left, .right{
-		height: 120%;
+		height: 160vh;
 		width: auto;
 	}
 
@@ -314,16 +320,30 @@ p{
 		left: auto;
 		transform: rotate(20deg);
 	}
+
+	$gb-shadow: rgb(148, 111, 84);
+
 	.button:hover{
-		box-shadow: 10px 10px 0px 0px rgba(148, 111, 84, 1);
+		box-shadow: 10px 10px 0px 0px $gb-shadow;
+	}
+
+	h2:hover{
+		cursor: pointer;
+		text-shadow: 5px 5px 0px $gb-shadow;
 	}
 	// background-image: url(/assets/images/backgrounds/gb_r.png);
 }
 
 #banana {
 	background: $banana;
+	$banana-shadow: rgb(190, 121, 0);
+
 	.button:hover{
-		box-shadow: 10px 10px 0px 0px rgba(190, 121, 0, 1);
+		box-shadow: 10px 10px 0px 0px $banana-shadow;
+	}
+	h2:hover{
+		cursor: pointer;
+		text-shadow: 5px 5px 0px $banana-shadow;
 	}
 
 }
@@ -338,15 +358,28 @@ p{
 		left: auto;
 		transform: rotate(50deg);
 	}
+	$mango-shadow: rgb(155, 82, 23);
+
 	.button:hover{
-		box-shadow: 10px 10px 0px 0px rgba(155, 82, 23, 1);
+		box-shadow: 10px 10px 0px 0px $mango-shadow;
+	}
+	h2:hover{
+		cursor: pointer;
+		text-shadow: 5px 5px 0px $mango-shadow;
 	}
 }
 
 #pineapple {
 	background: $pineapple;
+	$pine-shadow: rgb(137, 115, 178);
+
 	.button:hover{
-		box-shadow: 10px 10px 0px 0px rgba(137, 115, 178, 1);
+		box-shadow: 10px 10px 0px 0px $pine-shadow;
+	}
+
+	h2:hover{
+		cursor: pointer;
+		text-shadow: 5px 5px 0px $pine-shadow;
 	}
 }
 
@@ -357,16 +390,37 @@ p{
 
 footer{
 	margin-top: $gutter-large;
+
 	background: $cacao;
 	color: $seashell;
 	padding: $gutter;
 	overflow: auto;
-
+	a{
+		color: $seashell;
+		&:hover{
+			color: $driftwood;
+		}
+	}
 	svg .a{fill: $seashell;}
+
+	h2{
+		margin-top: 1rem;
+		color: $driftwood;
+		font-size: 2rem;
+		text-align: center;
+		.sans{
+			font-size: 2.2rem;
+		}
+	}
+	.flex{
+		padding-top: $gutter;
+		align-item: center;
+	}
 }
 
 .seal{
-	width: 200px;
-	float: right;
-	padding: 1.5rem;
+	width: 160px;
+	margin: auto;
+	display: block;
+	padding-bottom: $gutter;
 }

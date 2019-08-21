@@ -72,7 +72,7 @@ nav {
     margin-right: 0; }
 
 section {
-  min-height: 100vh;
+  min-height: 130vh;
   width: 100vw;
   padding: 6rem 0;
   position: relative; }
@@ -94,7 +94,7 @@ nav, h3 {
 
 h1, h2 {
   font-weight: 100;
-  line-height: 1.1;
+  line-height: 1;
   text-transform: uppercase; }
   h1 .sans, h2 .sans {
     font-family: "Founders Grotesk";
@@ -151,11 +151,14 @@ p {
   border-radius: 5px; }
 
 #intro {
-  padding-top: 200px; }
+  padding-top: 200px;
+  min-height: 100vh; }
   #intro h2, #intro p {
     text-align: left; }
   #intro .button {
     margin-left: 0; }
+  #intro .noon-img {
+    top: 30%; }
 
 .product {
   position: relative; }
@@ -183,7 +186,7 @@ p {
   left: 0;
   z-index: 0; }
   .scene .left, .scene .right {
-    height: 120%;
+    height: 160vh;
     width: auto; }
   .scene .left {
     float: left; }
@@ -210,11 +213,17 @@ p {
     transform: rotate(20deg); }
   #goldenberry .button:hover {
     box-shadow: 10px 10px 0px 0px #946f54; }
+  #goldenberry h2:hover {
+    cursor: pointer;
+    text-shadow: 5px 5px 0px #946f54; }
 
 #banana {
   background: #FFE480; }
   #banana .button:hover {
     box-shadow: 10px 10px 0px 0px #be7900; }
+  #banana h2:hover {
+    cursor: pointer;
+    text-shadow: 5px 5px 0px #be7900; }
 
 #mango {
   background: #FBBA91; }
@@ -226,11 +235,17 @@ p {
     transform: rotate(50deg); }
   #mango .button:hover {
     box-shadow: 10px 10px 0px 0px #9b5217; }
+  #mango h2:hover {
+    cursor: pointer;
+    text-shadow: 5px 5px 0px #9b5217; }
 
 #pineapple {
   background: #C7BBEB; }
   #pineapple .button:hover {
     box-shadow: 10px 10px 0px 0px #8973b2; }
+  #pineapple h2:hover {
+    cursor: pointer;
+    text-shadow: 5px 5px 0px #8973b2; }
 
 #about h2 {
   text-align: center; }
@@ -241,12 +256,27 @@ footer {
   color: #F5F5F3;
   padding: 1rem;
   overflow: auto; }
+  footer a {
+    color: #F5F5F3; }
+    footer a:hover {
+      color: #A0724D; }
   footer svg .a {
     fill: #F5F5F3; }
+  footer h2 {
+    margin-top: 1rem;
+    color: #A0724D;
+    font-size: 2rem;
+    text-align: center; }
+    footer h2 .sans {
+      font-size: 2.2rem; }
+  footer .flex {
+    padding-top: 1rem;
+    align-item: center; }
 
 .seal {
-  width: 200px;
-  float: right;
-  padding: 1.5rem; }
+  width: 160px;
+  margin: auto;
+  display: block;
+  padding-bottom: 1rem; }
 
 /*# sourceMappingURL=style.css.map */
