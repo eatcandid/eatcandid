@@ -161,6 +161,11 @@ p {
     top: 30%; }
 
 .product {
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-position: right center;
+  background-size: contain;
+  background-attachment: fixed;
   position: relative; }
   .product .content h2, .product .content p {
     width: 50%; }
@@ -204,7 +209,9 @@ p {
 
 #goldenberry {
   z-index: 0;
-  background-color: #EBCECD; }
+  background-color: #EBCECD;
+  background-position: left center;
+  background-image: url(/assets/images/backgrounds/gb-large.png); }
   #goldenberry .noon-img {
     left: 10%; }
   #goldenberry .product-img {
@@ -218,9 +225,13 @@ p {
     text-shadow: 5px 5px 0px #946f54; }
 
 #banana {
-  background: #FFE480; }
+  background-color: #FFE480;
+  background-image: url(/assets/images/backgrounds/banana-large.png); }
+  #banana .noon-img {
+    right: 10%;
+    left: auto; }
   #banana .product-img {
-    left: 20%;
+    left: 10%;
     right: auto; }
   #banana .button:hover {
     box-shadow: 10px 10px 0px 0px #be7900; }
@@ -229,7 +240,9 @@ p {
     text-shadow: 5px 5px 0px #be7900; }
 
 #mango {
-  background: #FBBA91; }
+  background-color: #FBBA91;
+  background-position: left center;
+  background-image: url(/assets/images/backgrounds/gb-large.png); }
   #mango .noon-img {
     left: 10%; }
   #mango .product-img {

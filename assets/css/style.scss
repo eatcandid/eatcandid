@@ -245,10 +245,12 @@ p{
 }
 
 .product{
-	// background-repeat: no-repeat;
-	// background-blend-mode: multiply;
-	// background-position: right center;
-	// background-size: contain;
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	background-position: right center;
+	background-size: contain;
+	background-attachment: fixed;
+
 	position: relative;
 
 	.content{
@@ -310,8 +312,11 @@ p{
 }
 
 #goldenberry {
+
 	z-index: 0;
 	background-color: $berry;
+	background-position: left center;
+
 	.noon-img{
 		left: 10%;
 	}
@@ -331,15 +336,21 @@ p{
 		cursor: pointer;
 		text-shadow: 5px 5px 0px $gb-shadow;
 	}
-	// background-image: url(/assets/images/backgrounds/gb_r.png);
+	background-image: url(/assets/images/backgrounds/gb-large.png);
 }
 
 #banana {
-	background: $banana;
+	background-color: $banana;
 	$banana-shadow: rgb(190, 121, 0);
 
+	background-image: url(/assets/images/backgrounds/banana-large.png);
+
+	.noon-img{
+		right: 10%;
+		left: auto;
+	}
 	.product-img{
-		left: 20%;
+		left: 10%;
 		right: auto;
 	}
 	.button:hover{
@@ -352,8 +363,13 @@ p{
 
 }
 
+
+
 #mango {
-	background: $mango;
+	background-color: $mango;
+	background-position: left center;
+	background-image: url(/assets/images/backgrounds/gb-large.png);
+
 	.noon-img{
 		left: 10%;
 	}
@@ -371,6 +387,7 @@ p{
 		cursor: pointer;
 		text-shadow: 5px 5px 0px $mango-shadow;
 	}
+	
 }
 
 #pineapple {
