@@ -75,7 +75,6 @@ nav {
     margin-right: 0; }
 
 section {
-  min-height: 100vh;
   width: 100vw;
   padding: 6rem 0;
   position: relative; }
@@ -104,7 +103,6 @@ h1, h2 {
   text-transform: uppercase; }
   h1 .sans, h2 .sans {
     font-weight: 100;
-    display: block;
     font-size: 8rem;
     line-height: .9; }
 
@@ -151,8 +149,7 @@ p {
   cursor: pointer; }
 
 #intro {
-  padding-top: 200px;
-  min-height: 100vh; }
+  padding-top: 200px; }
   #intro h2, #intro p {
     text-align: left; }
   #intro .button {
@@ -176,7 +173,7 @@ p {
   height: 100%;
   width: 100vw;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 0; }
@@ -194,7 +191,12 @@ p {
   left: -50px; }
 
 .scene.fixed {
-  position: fixed; }
+  position: absolute; }
+
+#berries {
+  width: 280px;
+  top: -50px;
+  right: -50px; }
 
 .crop {
   width: 300px;
@@ -220,15 +222,20 @@ p {
 #pineapple {
   background: #C7BBEB; }
 
-#about h2 {
-  text-align: center; }
+#about p {
+  max-width: 30rem;
+  margin: auto; }
 
 #sustainability {
-  background: #F5F5F3;
   color: #A0724D; }
 
+#afternoon {
+  background: #F5F5F3; }
+
+.carousel {
+  margin: 6rem 0; }
+
 footer {
-  margin-top: 6rem;
   position: relative;
   background: #1A1108;
   color: #F5F5F3;
