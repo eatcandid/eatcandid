@@ -79,11 +79,18 @@ img{
 	width: 100%;
 }
 
+.shadow {
+	filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
+Color='#444')";
+	filter: url('/assets/images/shadow.svg');
+	// -webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+	// filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+}
+
 header{
 	margin: $gutter;
 	margin-bottom: 0;
 	padding: $pad 0;
-	border-bottom: 1px solid $cacao;
 	.logo{
 		display: inline-block;
 		svg a{
@@ -93,7 +100,7 @@ header{
 }
 
 .logo svg{
-	width: 100px;
+	width: 130px;
 }
 
 nav{
@@ -116,7 +123,7 @@ nav{
 	display: flex;
 	.flex-item{
 		flex: 1;
-		margin-right: $gutter-large;
+		margin-right: $gutter;
 	}
 	.flex-item:last-child{
 		margin-right: 0;
@@ -129,6 +136,8 @@ section{
 	padding: $gutter-large 0;
 	position: relative;
 }
+
+
 
 .content{
 	max-width: 900px;
@@ -144,9 +153,13 @@ section{
 
 %subhead{
 	font-family: 'Founders Grotesk', sans-serif;
-	font-weight: 500;
+	font-weight: 200;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+}
+
+.sans{
+	font-family: "Founders Grotesk";
 }
 
 
@@ -156,13 +169,13 @@ h1,h2{
 	line-height: 1;
 	text-transform: uppercase;
 	.sans{
-		font-family: "Founders Grotesk";
 		font-weight: 100;
 		display: block;
 		font-size: 8rem;
 		line-height: .9;
 	}
 }
+
 
 
 h1{
@@ -174,10 +187,12 @@ h2{
 	.sans{
 		font-size: 4.6rem;
 	}
+	margin-bottom: $gutter;
 }
 
 h3{
 	@extend %subhead;
+	font-weight: 400;
 	margin-bottom: $gutter;
 }
 
@@ -202,27 +217,27 @@ p{
 	background: $royalpalm;
 	color: $seashell;
 	padding: $pad;
-	border-radius: 5px;
-	width: 150px;
+	border-radius: 10px;
+	width: 250px;
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 1px;
 	font-size: $size-m;
+	line-height: 1;
 	margin-top: 3rem;
 }
 
 .button:hover{
 	cursor: pointer;
-	box-shadow: 10px 10px 0px 0px rgba($royalpalm,0.5);
 }
 
-.image-placeholder{
-	width: 100%;
-	height: 300px;
-	background: $driftwood;
-	margin-bottom: $gutter;
-	border-radius: 5px;
-}
+// .image-placeholder{
+// 	width: 100%;
+// 	height: 300px;
+// 	background: $driftwood;
+// 	margin-bottom: $gutter;
+// 	border-radius: 10px;
+// }
 
 
 #intro {
@@ -244,177 +259,137 @@ p{
 
 }
 
-.product{
-	background-repeat: no-repeat;
-	background-blend-mode: multiply;
-	background-position: right center;
-	background-size: contain;
-	background-attachment: fixed;
+// .product{
+// 	background-repeat: no-repeat;
+// 	background-blend-mode: multiply;
+// 	background-position: right center;
+// 	background-size: contain;
+// 	background-attachment: fixed;
 
-	position: relative;
+// 	position: relative;
 
-	.content{
-		h2, p{
-			width: 50%;
-		}
-	}
-}
+// 	.content{
+// 		h2, p{
+// 			width: 50%;
+// 		}
+// 	}
+// }
 
 .product-img{
-	position: absolute;
-	left: 50px;
-	top: 50%;
 	width: 300px;
-	transform: rotate(-20deg);
 }
 
-.rightalign{
-	.content{
-		padding-left: 30%;
-		h2, p{
-			width: 100%;
-		}
-	}
+.content-image{
+	flex: 1;
 }
+
+.content-text{
+	flex: 2;
+}
+
+.content.flex > div{
+	margin-right: $gutter-large;
+}
+// .rightalign{
+// 	.content{
+// 		h2, p{
+// 			width: 100%;
+// 		}
+// 	}
+// }
 
 .scene{
 	height: 100%;
 	width: 100vw;
 	overflow: hidden;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 0;
-	.left, .right{
-		height: 100vh;
-		width: auto;
-	}
 
-	.left{
-		float: left;
+	img{
+		position: absolute;
 	}
-
-	.right{
-		float: right;
-	}
-
 }
 
+#nibs{
+	width: 250px;
+	bottom: 100px; 
+	right: 100px;
+}
+
+#turmeric{
+	width: 380px;
+	bottom: 0px;
+	left: -50px;
+}
 .scene.fixed{
 	position: fixed;
 }
 
-.noon-img{
-	position: absolute;
-	left: 50%;
-	top: 40%;
+// .noon-img{
+// 	position: absolute;
+// 	left: 50%;
+// 	top: 40%;
+// 	width: 300px;
+// }
+
+.crop{
 	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.slide{
+	border-radius: 10px;
+	overflow: hidden;
+	max-width: 500px;
+	margin: auto;
 }
 
 #goldenberry {
-
-	z-index: 0;
 	background-color: $berry;
-	background-position: left center;
-
-	.noon-img{
-		left: 10%;
-	}
-	.product-img{
-		right: 50px;
-		left: auto;
-		transform: rotate(20deg);
-	}
-
 	$gb-shadow: rgb(148, 111, 84);
 
-	.button:hover{
-		box-shadow: 10px 10px 0px 0px $gb-shadow;
-	}
-
-	h2:hover{
-		cursor: pointer;
-		text-shadow: 5px 5px 0px $gb-shadow;
-	}
-	background-image: url(/assets/images/backgrounds/gb-large.png);
 }
 
 #banana {
 	background-color: $banana;
 	$banana-shadow: rgb(190, 121, 0);
-
-	background-image: url(/assets/images/backgrounds/banana-large.png);
-
-	.noon-img{
-		right: 10%;
-		left: auto;
-	}
-	.product-img{
-		left: 10%;
-		right: auto;
-	}
-	.button:hover{
-		box-shadow: 10px 10px 0px 0px $banana-shadow;
-	}
-	h2:hover{
-		cursor: pointer;
-		text-shadow: 5px 5px 0px $banana-shadow;
-	}
-
 }
-
-
 
 #mango {
 	background-color: $mango;
-	background-position: left center;
-	background-image: url(/assets/images/backgrounds/gb-large.png);
-
-	.noon-img{
-		left: 10%;
-	}
-	.product-img{
-		right: 50px;
-		left: auto;
-		transform: rotate(50deg);
-	}
 	$mango-shadow: rgb(155, 82, 23);
-
-	.button:hover{
-		box-shadow: 10px 10px 0px 0px $mango-shadow;
-	}
-	h2:hover{
-		cursor: pointer;
-		text-shadow: 5px 5px 0px $mango-shadow;
-	}
 	
 }
 
 #pineapple {
 	background: $pineapple;
 	$pine-shadow: rgb(137, 115, 178);
-
-	.button:hover{
-		box-shadow: 10px 10px 0px 0px $pine-shadow;
-	}
-
-	h2:hover{
-		cursor: pointer;
-		text-shadow: 5px 5px 0px $pine-shadow;
-	}
 }
 
 #about h2{
 	text-align: center;
 }
 
+#sustainability {
+	background: $seashell;
+	color: $driftwood;
+}
+
+// #packaging {
+// 	background: $royalpalm;
+// 	color: $seashell
+// }
 
 footer{
 	margin-top: $gutter-large;
-
+	position: relative;
 	background: $cacao;
 	color: $seashell;
-	padding: $gutter;
+	padding: 3rem $gutter;
 	overflow: auto;
 	a{
 		color: $seashell;
