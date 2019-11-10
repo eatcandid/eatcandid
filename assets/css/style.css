@@ -331,7 +331,8 @@ p {
 
 .next {
   align-items: center;
-  display: flex; }
+  display: flex;
+  justify-content: center; }
 
 .svg-arrow {
   width: 70px; }
@@ -358,6 +359,8 @@ p {
       margin: 0 auto auto -5rem; }
   #sustainability h2 {
     color: #0E3220; }
+  #sustainability h3 {
+    margin-bottom: 0; }
   #sustainability .flex-item {
     text-align: center; }
 

@@ -524,6 +524,7 @@ $goldenberry-dark: #806147;
 .next{
 	align-items: center;
 	display: flex;
+	justify-content: center;
 }
 
 .svg-arrow{
@@ -558,6 +559,10 @@ $goldenberry-dark: #806147;
 	}
 	h2{
 		color: $royalpalm;
+	}
+
+	h3{
+		margin-bottom: 0;
 	}
 
 	.flex-item{
