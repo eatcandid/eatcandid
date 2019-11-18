@@ -2,17 +2,17 @@ $(function (){
 	console.log('script loaded');
 
 
-	$('#textshadow').realshadow({
-		// inset: true,
-		type: 'text',
-	});
+	// $('#textshadow').realshadow({
+	// 	// inset: true,
+	// 	type: 'text',
+	// });
 
-	$('#afternoon-after h2').realshadow({
-		// inset: true,
-		type: 'text',
-	});
+	// $('#afternoon-after h2').realshadow({
+	// 	// inset: true,
+	// 	type: 'text',
+	// });
 
-	// $('.button').realshadow({
+	// // $('.button').realshadow({
 	// 	length: 3,
 	// 	inset: true,
 	// 	followMouse: false

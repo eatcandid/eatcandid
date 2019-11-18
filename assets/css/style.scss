@@ -90,7 +90,7 @@ header{
 	padding: $gutter;
 	margin-bottom: 0;
 	width: 100vw;
-	position: absolute;
+	position: fixed;
 	z-index: 100;
 	background: $seashell;
 	.logo{
@@ -221,7 +221,7 @@ p{
 	color: rgba($seashell,0.8);
 	padding: .8rem 1rem 1rem;
 	border-radius: 5px;
-	width: 250px;
+	width: 150px;
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 2px;
@@ -231,9 +231,9 @@ p{
 	transition: box-shadow 200ms ease-in-out;
 
 	&:hover {
-		-webkit-box-shadow: inset 2px 2px 8px var(--box-shadow-color);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-		-moz-box-shadow: inset 2px 2px 8px var(--box-shadow-color);  /* Firefox 3.5 - 3.6 */
-		box-shadow: inset 2px 2px 8px var(--box-shadow-color);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+		-webkit-box-shadow: inset 5px 5px 8px var(--box-shadow-color);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+		-moz-box-shadow: inset 5px 5px 8px var(--box-shadow-color);  /* Firefox 3.5 - 3.6 */
+		box-shadow: inset 5px 5px 8px var(--box-shadow-color);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 	}
 }
 
@@ -258,10 +258,7 @@ p{
 	background-attachment: fixed;
 	background-size: cover;
 	background-image: url('/assets/images/backgrounds/candid_all.jpg');
-	p,h2{
-		color: #411e0d;
-		filter: blur(1px);
-	}
+
 	h2{
 		text-align: left;
 	}
@@ -269,12 +266,13 @@ p{
 		margin-bottom: 0;
 	}
 	.content{
+		color: #5e2406;
 		max-width: none;
-		padding: $gutter-large;
+		padding: 4rem;
 	}
 	.intro-text{
 		line-height: 1;
-		font-size: 45px;
+		font-size: 40px;
 	}
 
 }
@@ -295,23 +293,23 @@ p{
 // 	}
 // }
 
-.render{
-	position: relative;
-	margin: auto;
-	padding: $gutter-large;
-	padding-left: 0;
-}
-.product-img{
-	width: 300px;
-}
+// .render{
+// 	position: relative;
+// 	margin: auto;
+// 	padding: $gutter-large;
+// 	padding-left: 0;
+// }
+// .product-img{
+// 	width: 300px;
+// }
 
-.shadow-img{
-	width: 200px;
-	mix-blend-mode: multiply;
-	position: relative;
-	right: -9px;
-	top: -28px;
-}
+// .shadow-img{
+// 	width: 200px;
+// 	mix-blend-mode: multiply;
+// 	position: relative;
+// 	right: -9px;
+// 	top: -28px;
+// }
 
 
 
@@ -479,11 +477,11 @@ $goldenberry-dark: #806147;
 	margin: auto;
 }
 
-.shadow:hover {
-  -webkit-box-shadow: inset 2px 2px 8px var(--box-shadow-color);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow: inset 2px 2px 8px var(--box-shadow-color);  /* Firefox 3.5 - 3.6 */
-  box-shadow: inset 2px 2px 8px var(--box-shadow-color);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-}
+// .shadow:hover {
+//   -webkit-box-shadow: inset 2px 2px 8px var(--box-shadow-color);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+//   -moz-box-shadow: inset 2px 2px 8px var(--box-shadow-color);  /* Firefox 3.5 - 3.6 */
+//   box-shadow: inset 2px 2px 8px var(--box-shadow-color);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+// }
 
 
 
@@ -542,20 +540,22 @@ $goldenberry-dark: #806147;
 	color: $driftwood;
 	padding: $gutter-large;
 
-	.center-img{
-		width: 300px;
-		height: 300px;
-		border-radius: 50%;
-		
-		margin: auto;
-		margin-bottom: $gutter;
+	.photo{
+		width: 50%;
+		height: 200px;
+		border-radius: 5px;
 		overflow: hidden;
-
 		img{
-			height: 100%;
-			width: auto;
-			margin: 0 auto auto -5rem;
+			width: 100%;
+			height: auto;
+			vertical-align: middle;
 		}
+	}
+	.flex{
+		margin-bottom: 1rem;
+	}
+	.flex-item{
+		margin-left: 1rem;
 	}
 	h2{
 		color: $royalpalm;
@@ -565,9 +565,6 @@ $goldenberry-dark: #806147;
 		margin-bottom: 0;
 	}
 
-	.flex-item{
-		text-align: center;
-	}
 	// .content-image{
 	// 	background-image: url('/assets/images/backgrounds/sustainability.jpg');
 	// 	background-position: 30vw center;
@@ -585,52 +582,51 @@ $goldenberry-dark: #806147;
 #afternoon{
 	// background: $royalpalm;
 	background-attachment: fixed;
-	background-size: cover;
-	background-image: url('/assets/images/backgrounds/candid_all_2.jpg');
-	background-position: 10% center;
+	background-size: 50%;
+	background-image: url('/assets/images/backgrounds/afternoon_all_boxes_orig.gif');
+	background-position: center center;
 	
 
 	display: flex;
 	align-items: center;
 
-
-	.circle{
-		background: rgba($seashell,0.8);
-		width: 500px;
-		height: 500px;
-		border-radius: 50%;
-		filter: blur(10px);
-
-		
-	}
-
-
-}
-#afternoon-after{
-	background: $mango-dark;
-	display: flex;
-	align-items: center;
 	h2{
-		filter: blur(1px);
 		text-align: center;
-		color: #562c11;
-		// position: absolute;
-		// top: 50%;
-		// left: 50%;
-		// transform: translate(-50%,-50%);
-		// z-index: 20;
+		color: $seashell;
+		text-shadow: $driftwood 3px 3px 6px;
 	}
-	-webkit-box-shadow: inset 5px 5px 60px #8c3c1b;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-	-moz-box-shadow: inset 5px 5px 60px #8c3c1b;  /* Firefox 3.5 - 3.6 */
-	box-shadow: inset 5px 5px 60px #8c3c1b;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-
 }
+// #afternoon-after{
+// 	background: $driftwood;
+// 	display: flex;
+// 	align-items: center;
+// 	video{
+// 		width: 100%;
+// 	}
+// 	h2{
+// 		// filter: blur(1px);
+// 		color: $cacao;
+// 		// position: absolute;
+// 		// top: 50%;
+// 		// left: 50%;
+// 		// transform: translate(-50%,-50%);
+// 		// z-index: 20;
+// 	}
+// 	-webkit-box-shadow: inset 5px 5px 60px #8c3c1b;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+// 	-moz-box-shadow: inset 5px 5px 60px #8c3c1b;  /* Firefox 3.5 - 3.6 */
+// 	box-shadow: inset 5px 5px 60px #8c3c1b;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+// }
 footer{
 	position: relative;
 	background: $cacao;
 	color: $driftwood;
 	padding: 3rem $gutter;
 	overflow: auto;
+	text-align: center;
+	p{
+		margin: .5rem 0;
+	}
 	a{
 		color: $driftwood;
 		&:hover{
@@ -651,5 +647,25 @@ footer{
 	.flex{
 		padding-top: $gutter;
 		align-item: center;
+	}
+	.social{
+		margin-top: 1rem;
+	}
+	.social a{
+		display: inline-block;
+		margin-right: 15px;
+	}
+
+	#insta-icon{
+		width: 20px;
+	}
+	#facebook{
+		width: 20px;
+	}
+	.ig-fill{
+		fill: $driftwood;
+	}
+	.no-fill{
+		fill: none;
 	}
 }

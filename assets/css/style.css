@@ -45,7 +45,7 @@ header {
   padding: 1rem;
   margin-bottom: 0;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   background: #F5F5F3; }
   header .logo {
@@ -139,7 +139,7 @@ p {
   color: rgba(245, 245, 243, 0.8);
   padding: .8rem 1rem 1rem;
   border-radius: 5px;
-  width: 250px;
+  width: 150px;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 2px;
@@ -148,11 +148,11 @@ p {
   margin-top: 2rem;
   transition: box-shadow 200ms ease-in-out; }
   .button:hover {
-    -webkit-box-shadow: inset 2px 2px 8px var(--box-shadow-color);
+    -webkit-box-shadow: inset 5px 5px 8px var(--box-shadow-color);
     /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow: inset 2px 2px 8px var(--box-shadow-color);
+    -moz-box-shadow: inset 5px 5px 8px var(--box-shadow-color);
     /* Firefox 3.5 - 3.6 */
-    box-shadow: inset 2px 2px 8px var(--box-shadow-color);
+    box-shadow: inset 5px 5px 8px var(--box-shadow-color);
     /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */ }
 
 #intro {
@@ -160,35 +160,17 @@ p {
   background-attachment: fixed;
   background-size: cover;
   background-image: url("/assets/images/backgrounds/candid_all.jpg"); }
-  #intro p, #intro h2 {
-    color: #411e0d;
-    filter: blur(1px); }
   #intro h2 {
     text-align: left; }
   #intro p {
     margin-bottom: 0; }
   #intro .content {
+    color: #5e2406;
     max-width: none;
-    padding: 6rem; }
+    padding: 4rem; }
   #intro .intro-text {
     line-height: 1;
-    font-size: 45px; }
-
-.render {
-  position: relative;
-  margin: auto;
-  padding: 6rem;
-  padding-left: 0; }
-
-.product-img {
-  width: 300px; }
-
-.shadow-img {
-  width: 200px;
-  mix-blend-mode: multiply;
-  position: relative;
-  right: -9px;
-  top: -28px; }
+    font-size: 40px; }
 
 .content-text {
   width: 50vw;
@@ -299,14 +281,6 @@ p {
   max-width: 500px;
   margin: auto; }
 
-.shadow:hover {
-  -webkit-box-shadow: inset 2px 2px 8px var(--box-shadow-color);
-  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow: inset 2px 2px 8px var(--box-shadow-color);
-  /* Firefox 3.5 - 3.6 */
-  box-shadow: inset 2px 2px 8px var(--box-shadow-color);
-  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */ }
-
 #about {
   background: #F5F5F3;
   padding: 6rem;
@@ -346,59 +320,45 @@ p {
 #sustainability {
   color: #A0724D;
   padding: 6rem; }
-  #sustainability .center-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin: auto;
-    margin-bottom: 1rem;
+  #sustainability .photo {
+    width: 50%;
+    height: 200px;
+    border-radius: 5px;
     overflow: hidden; }
-    #sustainability .center-img img {
-      height: 100%;
-      width: auto;
-      margin: 0 auto auto -5rem; }
+    #sustainability .photo img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle; }
+  #sustainability .flex {
+    margin-bottom: 1rem; }
+  #sustainability .flex-item {
+    margin-left: 1rem; }
   #sustainability h2 {
     color: #0E3220; }
   #sustainability h3 {
     margin-bottom: 0; }
-  #sustainability .flex-item {
-    text-align: center; }
 
 #afternoon {
   background-attachment: fixed;
-  background-size: cover;
-  background-image: url("/assets/images/backgrounds/candid_all_2.jpg");
-  background-position: 10% center;
+  background-size: 50%;
+  background-image: url("/assets/images/backgrounds/afternoon_all_boxes_orig.gif");
+  background-position: center center;
   display: flex;
   align-items: center; }
-  #afternoon .circle {
-    background: rgba(245, 245, 243, 0.8);
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    filter: blur(10px); }
-
-#afternoon-after {
-  background: #945023;
-  display: flex;
-  align-items: center;
-  -webkit-box-shadow: inset 5px 5px 60px #8c3c1b;
-  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow: inset 5px 5px 60px #8c3c1b;
-  /* Firefox 3.5 - 3.6 */
-  box-shadow: inset 5px 5px 60px #8c3c1b;
-  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */ }
-  #afternoon-after h2 {
-    filter: blur(1px);
+  #afternoon h2 {
     text-align: center;
-    color: #562c11; }
+    color: #F5F5F3;
+    text-shadow: #A0724D 3px 3px 6px; }
 
 footer {
   position: relative;
   background: #1A1108;
   color: #A0724D;
   padding: 3rem 1rem;
-  overflow: auto; }
+  overflow: auto;
+  text-align: center; }
+  footer p {
+    margin: .5rem 0; }
   footer a {
     color: #A0724D; }
     footer a:hover {
@@ -415,5 +375,18 @@ footer {
   footer .flex {
     padding-top: 1rem;
     align-item: center; }
+  footer .social {
+    margin-top: 1rem; }
+  footer .social a {
+    display: inline-block;
+    margin-right: 15px; }
+  footer #insta-icon {
+    width: 20px; }
+  footer #facebook {
+    width: 20px; }
+  footer .ig-fill {
+    fill: #A0724D; }
+  footer .no-fill {
+    fill: none; }
 
 /*# sourceMappingURL=style.css.map */
