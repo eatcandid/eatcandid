@@ -24,7 +24,8 @@
   box-sizing: border-box; }
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  font-size: 16px; }
 
 body {
   font-family: 'Founders Grotesk', sans-serif;
@@ -46,6 +47,7 @@ header {
   margin-bottom: 0;
   width: 100vw;
   position: fixed;
+  top: 0;
   z-index: 100;
   background: #F5F5F3; }
   header .logo {
@@ -92,10 +94,7 @@ h1, h2 {
   font-family: 'Cooper Light', serif; }
 
 nav, h3 {
-  font-family: 'Founders Grotesk', sans-serif;
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
+  font-family: 'Founders Grotesk', sans-serif; }
 
 .sans {
   font-family: "Founders Grotesk"; }
@@ -119,7 +118,9 @@ h2 {
     font-size: 4.6rem; }
 
 h3 {
-  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
   margin-bottom: 1rem; }
 
 .centered {
@@ -145,7 +146,7 @@ p {
   letter-spacing: 2px;
   font-size: 1.8rem;
   line-height: 1;
-  margin-top: 2rem;
+  margin: 1.5rem 0;
   transition: box-shadow 200ms ease-in-out; }
   .button:hover {
     -webkit-box-shadow: inset 5px 5px 8px var(--box-shadow-color);
@@ -172,6 +173,14 @@ p {
     line-height: 1;
     font-size: 40px; }
 
+.rightalign .content-image {
+  background-position: left center; }
+
+.product:nth-child(2n) .flex .content-image {
+  order: 1; }
+.product:nth-child(2n) .flex .content-text {
+  order: 0; }
+
 .content-text {
   width: 50vw;
   padding: 6rem; }
@@ -179,7 +188,7 @@ p {
     max-width: 22em; }
 
 .send {
-  display: block; }
+  display: inline-block; }
 
 .seal {
   width: 100px;
@@ -190,12 +199,9 @@ p {
 .content-image {
   width: 50vw;
   background-attachment: fixed;
-  background-size: auto 100%;
-  background-position: right center;
+  background-size: contain;
+  background-position: right 50%;
   background-repeat: no-repeat; }
-
-.rightalign .content-image {
-  background-position: left center; }
 
 #pineapple {
   background: #C7BBEB;
@@ -206,6 +212,8 @@ p {
     background-color: #8061A9; }
   #pineapple .content-image {
     background-image: url("/assets/images/products/prod-pine.jpg"); }
+  #pineapple .nutrition {
+    color: #8061A9; }
 
 #mango {
   background-color: #FBBA91;
@@ -216,6 +224,8 @@ p {
     background-color: #945023; }
   #mango .content-image {
     background-image: url("/assets/images/products/prod-mango.jpg"); }
+  #mango .nutrition {
+    color: #945023; }
 
 #banana {
   background-color: #FFE480;
@@ -226,6 +236,8 @@ p {
     background-color: #B5722A; }
   #banana .content-image {
     background-image: url("/assets/images/products/prod-banana.jpg"); }
+  #banana .nutrition {
+    color: #B5722A; }
 
 #goldenberry {
   background-color: #EBCECD;
@@ -236,6 +248,8 @@ p {
     background-color: #806147; }
   #goldenberry .content-image {
     background-image: url("/assets/images/products/prod-gb.jpg"); }
+  #goldenberry .nutrition {
+    color: #806147; }
 
 .scene {
   height: 100%;
@@ -294,14 +308,14 @@ p {
     #about .seal .a {
       fill: #A0724D; }
   #about .process {
-    margin: 3rem auto 1rem;
-    padding: 0 6rem; }
+    margin: 3rem auto 1rem; }
+    #about .process img {
+      width: 100px; }
   #about .caption {
+    color: #A0724D;
+    width: 16em;
     font-weight: 400;
-    font-size: 14px; }
-    #about .caption p {
-      color: #A0724D;
-      width: 16em; }
+    font-size: 15px; }
 
 .next {
   align-items: center;
@@ -337,6 +351,40 @@ p {
     color: #0E3220; }
   #sustainability h3 {
     margin-bottom: 0; }
+  #sustainability p {
+    max-width: 16em; }
+
+.nutrition h4 {
+  font-size: 1em;
+  font-weight: 500; }
+  .nutrition h4:hover {
+    cursor: pointer;
+    text-decoration: underline; }
+
+.nutrition-table {
+  display: none;
+  font-size: 15px; }
+  .nutrition-table .row {
+    display: flex;
+    border-bottom: 1px solid;
+    padding: 3px 0; }
+  .nutrition-table .label {
+    width: 65%;
+    font-weight: 500; }
+  .nutrition-table .sub .label {
+    padding-left: 1rem;
+    font-weight: 100; }
+  .nutrition-table .quant {
+    width: 20%;
+    text-align: right; }
+  .nutrition-table .percent {
+    text-align: right;
+    width: 15%; }
+    .nutrition-table .percent:after {
+      content: "%"; }
+
+#afternoon h2 {
+  text-shadow: #A0724D 3px 3px 6px; }
 
 #afternoon {
   background-attachment: fixed;
@@ -347,8 +395,19 @@ p {
   align-items: center; }
   #afternoon h2 {
     text-align: center;
-    color: #F5F5F3;
-    text-shadow: #A0724D 3px 3px 6px; }
+    color: #F5F5F3; }
+
+#privacy {
+  margin: 5rem 0 3rem; }
+  #privacy h1 {
+    font-size: 2em; }
+  #privacy h2 {
+    margin-top: 2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: 'Founders Grotesk'; }
+  #privacy p {
+    max-width: 30em; }
 
 footer {
   position: relative;
@@ -388,5 +447,95 @@ footer {
     fill: #A0724D; }
   footer .no-fill {
     fill: none; }
+
+.links {
+  font-size: 16px; }
+  .links a:hover {
+    text-decoration: underline; }
+
+.mobile-menu {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: none; }
+
+.bar {
+  width: 30px;
+  height: 5px;
+  margin-bottom: 3px;
+  background: #1A1108; }
+
+@media (max-width: 750px) {
+  nav ul.menu {
+    display: none; }
+
+  .mobile-menu {
+    display: block; }
+
+  ul.menu {
+    display: none;
+    width: 100vw;
+    padding: 20px;
+    padding-bottom: 0; }
+    ul.menu li {
+      font-size: 26px;
+      margin-bottom: 1rem; }
+
+  h2 {
+    font-size: 3.5rem; }
+
+  #intro {
+    background-size: cover;
+    background-position: 40% center;
+    padding-top: 70vh; }
+    #intro .intro-text {
+      font-size: 36px; }
+    #intro .content {
+      padding: 1rem;
+      color: #F5F5F3;
+      text-shadow: #A0724D 3px 3px 6px; }
+    #intro h2 .sans {
+      font-size: 4rem; }
+
+  #about {
+    padding: 1rem;
+    padding-bottom: 3rem; }
+    #about .process {
+      display: block; }
+      #about .process .flex-item {
+        margin-right: 0;
+        margin-bottom: 1rem; }
+    #about .next, #about .break {
+      display: none; }
+
+  .product .flex {
+    display: block; }
+
+  .content-text {
+    width: 100vw;
+    padding: 4rem 2rem; }
+
+  .content-image {
+    width: 100vw;
+    height: 80vh;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: 50% 50%; }
+
+  .rightalign .content-image {
+    background-position: 50% 50%; }
+
+  #sustainability {
+    padding: 4rem 2rem; }
+    #sustainability .flex {
+      display: block; }
+      #sustainability .flex .flex-item {
+        margin: 1rem 0 2rem; }
+      #sustainability .flex .photo {
+        height: auto; }
+    #sustainability .photo {
+      width: 100%; }
+    #sustainability p {
+      max-width: none; } }
 
 /*# sourceMappingURL=style.css.map */
