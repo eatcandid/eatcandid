@@ -324,7 +324,12 @@ p {
 .next {
   align-items: center;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  animation: blink 1s ease-in-out alternate infinite; }
+
+.part2 {
+  opacity: 0;
+  animation-delay: 1s; }
 
 .svg-arrow {
   width: 70px; }
@@ -388,28 +393,25 @@ p {
     .nutrition-table .percent:after {
       content: "%"; }
 
-#afternoon {
-  z-index: 0;
-  background-attachment: fixed;
-  background-size: 50%;
+#afternoon .afternoon-bg {
   background-image: url("/assets/images/backgrounds/afternoon_all_boxes_orig.gif");
-  background-position: left top; }
-  #afternoon .content {
-    max-width: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    margin: 0;
-    top: 53%;
-    padding: 2rem;
-    background: #1A1108; }
-  #afternoon h2 {
-    font-size: 3rem;
-    margin: auto;
-    text-align: center;
-    color: #A0724D; }
+  position: static;
+  background-attachment: fixed;
+  background-size: 400px;
+  background-position: center center;
+  height: 100vh;
+  background-repeat: repeat; }
+#afternoon .content {
+  width: 100vw;
+  margin: 0;
+  max-width: 0;
+  padding: 2rem;
+  background: #1A1108; }
+#afternoon h2 {
+  font-size: 3rem;
+  margin: auto;
+  text-align: center;
+  color: #A0724D; }
 
 #privacy {
   margin: 5rem 0 3rem; }
@@ -427,7 +429,7 @@ footer {
   position: relative;
   background: #1A1108;
   color: #A0724D;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   overflow: auto;
   text-align: center; }
   footer p {
@@ -439,10 +441,10 @@ footer {
   footer svg .a {
     fill: #A0724D; }
   footer h2 {
-    margin-top: 1rem;
     color: #A0724D;
     font-size: 2rem;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 2rem; }
     footer h2 .sans {
       font-size: 2.2rem; }
   footer .flex {
@@ -567,15 +569,27 @@ footer {
     #sustainability p {
       max-width: none; }
 
-  #afternoon .content {
-    top: 51vh; }
-    #afternoon .content h2 {
-      font-size: 2rem; }
+  #afternoon {
+    min-height: 0; }
+    #afternoon .afternoon-bg {
+      background-size: cover;
+      background-attachment: scroll;
+      background-repeat: no-repeat;
+      height: 50vh; }
+    #afternoon .content {
+      position: static; }
+      #afternoon .content h2 {
+        font-size: 2rem; }
 
   #privacy {
     padding: 1rem; } }
 @media (min-width: 751px) {
   ul.menu {
     display: flex !important; } }
+@keyframes blink {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 2; } }
 
 /*# sourceMappingURL=style.css.map */

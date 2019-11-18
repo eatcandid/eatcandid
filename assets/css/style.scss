@@ -551,6 +551,11 @@ p{
 	align-items: center;
 	display: flex;
 	justify-content: center;
+	animation: blink 1s ease-in-out alternate infinite;
+}
+.part2{
+	opacity: 0;
+	animation-delay: 1s;
 }
 
 .svg-arrow{
@@ -654,20 +659,37 @@ p{
 }
 #afternoon{
 	// background: $royalpalm;
-	z-index: 0;
-	background-attachment: fixed;
-	background-size: 50%;
-	background-image: url('/assets/images/backgrounds/afternoon_all_boxes_orig.gif');
-	background-position: left top;
+	// z-index: 0;
+	.afternoon-bg{
+		background-image: url('/assets/images/backgrounds/afternoon_all_boxes_orig.gif');
+		position: static;
+		background-attachment: fixed;
+		background-size: 400px;
+		background-position: center center;
+		height: 100vh;
+		background-repeat: repeat;
+	}
+	// .afternoon-bg{
+	// 	background-attachment: fixed;
+	// 	background-size: 50%;
+		
+	// 	background-position: left top;
+	// 	position: absolute;
+	// 	width: 100vw;
+	// 	height: 100vh;
+	// }
 	.content{
-		max-width: none;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
 		width: 100vw;
 		margin: 0;
-		top: 53%;
+		max-width: 0;
+		// max-width: none;
+		// position: fixed;
+		// top: 0;
+		// left: 0;
+		// right: 0;
+		// width: 100vw;
+		// margin: 0;
+		// top: 53%;
 		padding: 2rem;
 		background: $cacao;
 	}
@@ -720,7 +742,7 @@ footer{
 	position: relative;
 	background: $cacao;
 	color: $driftwood;
-	padding: 3rem $gutter;
+	padding: 2rem $gutter;
 	overflow: auto;
 	text-align: center;
 	p{
@@ -735,13 +757,13 @@ footer{
 	svg .a{fill: $driftwood;}
 
 	h2{
-		margin-top: 1rem;
 		color: $driftwood;
 		font-size: 2rem;
 		text-align: center;
 		.sans{
 			font-size: 2.2rem;
 		}
+		margin-bottom: 2rem;
 	}
 	.flex{
 		padding-top: $gutter;
@@ -899,11 +921,20 @@ footer{
 			max-width: none;
 		}
 	}
+	#afternoon{
+		min-height: 0;
+		.afternoon-bg{
+			background-size: cover;
+			background-attachment: scroll;
+			background-repeat: no-repeat;
+			height: 50vh;
+		}
 
-	#afternoon .content{
-		top: 51vh;
-		h2{
-			font-size: 2rem;
+		 .content{
+			position: static;
+			h2{
+				font-size: 2rem;
+			}
 		}
 	}
 	#privacy{
@@ -913,5 +944,14 @@ footer{
 @media (min-width: 751px){
 	ul.menu{
 		display: flex !important;
+	}
+}
+
+@keyframes blink{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 2;
 	}
 }
