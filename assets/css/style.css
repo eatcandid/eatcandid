@@ -482,11 +482,14 @@ footer {
       margin-bottom: 1rem; }
 
   h2 {
-    font-size: 3.5rem; }
+    font-size: 3rem; }
+    h2 .sans {
+      font-size: 3.55rem; }
 
   #intro {
     background-size: cover;
     background-position: 40% center;
+    background-attachment: scroll;
     padding-top: 70vh; }
     #intro .intro-text {
       font-size: 36px; }
@@ -494,8 +497,6 @@ footer {
       padding: 1rem;
       color: #F5F5F3;
       text-shadow: #A0724D 3px 3px 6px; }
-    #intro h2 .sans {
-      font-size: 4rem; }
 
   #about {
     padding: 1rem;
@@ -536,6 +537,9 @@ footer {
     #sustainability .photo {
       width: 100%; }
     #sustainability p {
-      max-width: none; } }
+      max-width: none; }
+
+  #privacy {
+    padding: 1rem; } }
 
 /*# sourceMappingURL=style.css.map */

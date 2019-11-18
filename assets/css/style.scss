@@ -794,11 +794,16 @@ footer{
 		}
 	}
 	h2{
-		font-size: 3.5rem;
+		font-size: 3rem;
+		.sans{
+			font-size: 3.55rem;
+		}	
 	}
+
 	#intro {
 		background-size: cover;
 		background-position: 40% center;
+		background-attachment: scroll;
 		padding-top: 70vh;
 
 		.intro-text{
@@ -809,11 +814,7 @@ footer{
 			color: $seashell;
 			text-shadow: $driftwood 3px 3px 6px;
 		}
-		h2{
-			.sans{
-				font-size: 4rem;
-			}	
-		}
+		
 	}
 
 	#about{
@@ -865,5 +866,8 @@ footer{
 		p{
 			max-width: none;
 		}
+	}
+	#privacy{
+		padding: 1rem;
 	}
 }
