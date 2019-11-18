@@ -506,15 +506,15 @@ footer {
   #intro {
     width: 100vw;
     background-size: auto 100%;
-    background-position: 40% center;
+    background-position: 70% center;
     background-attachment: scroll;
-    padding-top: 65vh; }
+    padding-top: 60vh; }
     #intro .intro-text {
       font-size: 30px; }
     #intro .content {
+      background: #1A1108;
       padding: 1rem;
-      color: #F5F5F3;
-      text-shadow: #A0724D 3px 3px 6px; }
+      color: #A0724D; }
 
   #about {
     padding: 2rem 1rem;
@@ -526,6 +526,8 @@ footer {
       #about .process .flex-item {
         margin-right: 0;
         margin-bottom: 1rem; }
+      #about .process .flex-item:first-child {
+        margin-bottom: 2rem; }
     #about .next, #about .break {
       display: none; }
 
@@ -560,7 +562,7 @@ footer {
       max-width: none; }
 
   #afternoon .content {
-    top: 53%; }
+    top: 51vh; }
     #afternoon .content h2 {
       font-size: 2rem; }
 

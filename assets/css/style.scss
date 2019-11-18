@@ -819,17 +819,18 @@ footer{
 	#intro {
 		width: 100vw;
 		background-size: auto 100%;
-		background-position: 40% center;
+		background-position: 70% center;
 		background-attachment: scroll;
-		padding-top: 65vh;
+		padding-top: 60vh;
 
 		.intro-text{
 			font-size: 30px;
 		}
 		.content{
+			background: $cacao;
 			padding: 1rem;
-			color: $seashell;
-			text-shadow: $driftwood 3px 3px 6px;
+			color: $driftwood;
+			// text-shadow: $driftwood 3px 3px 6px;
 		}
 		
 	}
@@ -845,6 +846,9 @@ footer{
 			.flex-item{
 				margin-right: 0;
 				margin-bottom: 1rem;
+			}
+			.flex-item:first-child{
+				margin-bottom: 2rem;
 			}
 		}
 		.next, .break{
@@ -889,7 +893,7 @@ footer{
 	}
 
 	#afternoon .content{
-		top: 53%;
+		top: 51vh;
 		h2{
 			font-size: 2rem;
 		}
