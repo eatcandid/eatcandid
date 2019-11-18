@@ -41,6 +41,11 @@ $pineapple: #C7BBEB;
 $berry: #EBCECD;
 $banana: #FFE480;
 
+$pineapple-dark: #8061A9;
+$mango-dark: #945023;
+$banana-dark: #B5722A;
+$goldenberry-dark: #806147;
+
 
 // SPACES and SIZES
 $gutter: 1rem;
@@ -258,6 +263,7 @@ p{
 
 
 #intro {
+	background-color: $mango-dark;
 	padding-top: 200px;
 	background-attachment: fixed;
 	background-size: cover;
@@ -369,10 +375,6 @@ p{
 }
 
 
-$pineapple-dark: #8061A9;
-$mango-dark: #945023;
-$banana-dark: #B5722A;
-$goldenberry-dark: #806147;
 
 
 #pineapple {
@@ -821,14 +823,17 @@ footer{
 		background-size: auto 100%;
 		background-position: 70% center;
 		background-attachment: scroll;
-		padding-top: 60vh;
 
 		.intro-text{
 			font-size: 30px;
 		}
 		.content{
+			position: absolute;
+			height: 30vh;
+			width: 100vw;
+			bottom: 0;
 			background: $cacao;
-			padding: 1rem;
+			padding: 1.5rem 2rem;
 			color: $driftwood;
 			// text-shadow: $driftwood 3px 3px 6px;
 		}
