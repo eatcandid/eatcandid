@@ -6,6 +6,12 @@ $(function (){
 
 	$('.mobile-menu').click(function(){
 		$('ul.menu').slideToggle(150);
+		$('header').toggleClass('open');
+	});
+
+	$('ul.menu li').click(function(){
+		$('ul.menu').slideToggle(150);
+		$('header').toggleClass('open');
 	});
 	
 });

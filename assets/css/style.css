@@ -60,6 +60,8 @@ header {
 
 nav {
   display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   float: right;
   padding-top: 3px; }
   nav ul.menu {
@@ -79,7 +81,8 @@ nav {
 section {
   width: 100vw;
   position: relative;
-  min-height: 100vh; }
+  min-height: 100vh;
+  z-index: 10; }
 
 section.product {
   min-height: 0; }
@@ -115,7 +118,7 @@ h2 {
   font-size: 4rem;
   margin-bottom: 1rem; }
   h2 .sans {
-    font-size: 4.6rem; }
+    font-size: 1.15em; }
 
 h3 {
   text-transform: uppercase;
@@ -332,8 +335,8 @@ p {
   stroke-width: 11px; }
 
 #sustainability {
-  color: #A0724D;
-  padding: 6rem; }
+  padding: 6rem;
+  background: #F5F5F3; }
   #sustainability .photo {
     width: 50%;
     height: 200px;
@@ -344,9 +347,9 @@ p {
       height: auto;
       vertical-align: middle; }
   #sustainability .flex {
-    margin-bottom: 1rem; }
+    margin-bottom: 2rem; }
   #sustainability .flex-item {
-    margin-left: 1rem; }
+    margin-left: 2rem; }
   #sustainability h2 {
     color: #0E3220; }
   #sustainability h3 {
@@ -383,19 +386,28 @@ p {
     .nutrition-table .percent:after {
       content: "%"; }
 
-#afternoon h2 {
-  text-shadow: #A0724D 3px 3px 6px; }
-
 #afternoon {
+  z-index: 0;
   background-attachment: fixed;
   background-size: 50%;
   background-image: url("/assets/images/backgrounds/afternoon_all_boxes_orig.gif");
-  background-position: center center;
-  display: flex;
-  align-items: center; }
+  background-position: left top; }
+  #afternoon .content {
+    max-width: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    margin: 0;
+    top: 53%;
+    padding: 2rem;
+    background: #1A1108; }
   #afternoon h2 {
+    font-size: 3rem;
+    margin: auto;
     text-align: center;
-    color: #F5F5F3; }
+    color: #A0724D; }
 
 #privacy {
   margin: 5rem 0 3rem; }
@@ -466,6 +478,12 @@ footer {
   background: #1A1108; }
 
 @media (max-width: 750px) {
+  header {
+    background: transparent; }
+
+  header.open {
+    background: #F5F5F3; }
+
   nav ul.menu {
     display: none; }
 
@@ -475,19 +493,18 @@ footer {
   ul.menu {
     display: none;
     width: 100vw;
-    padding: 20px;
-    padding-bottom: 0; }
+    right: 0;
+    padding: 20px; }
     ul.menu li {
       font-size: 26px;
       margin-bottom: 1rem; }
 
   h2 {
     font-size: 3rem; }
-    h2 .sans {
-      font-size: 3.55rem; }
 
   #intro {
-    background-size: cover;
+    width: 100vw;
+    background-size: auto 100%;
     background-position: 40% center;
     background-attachment: scroll;
     padding-top: 70vh; }
@@ -539,7 +556,15 @@ footer {
     #sustainability p {
       max-width: none; }
 
+  #afternoon .content {
+    top: 57%; }
+    #afternoon .content h2 {
+      font-size: 2rem; }
+
   #privacy {
     padding: 1rem; } }
+@media (min-width: 751px) {
+  ul.menu {
+    display: flex !important; } }
 
 /*# sourceMappingURL=style.css.map */

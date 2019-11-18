@@ -110,6 +110,8 @@ header{
 nav{
 	display: inline-block;
 	@extend %subhead;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	float: right;
 	padding-top: 3px;
 
@@ -139,6 +141,7 @@ section{
 	width: 100vw;
 	position: relative;
 	min-height: 100vh;
+	z-index: 10;
 }
 
 section.product{
@@ -188,7 +191,7 @@ h1{
 h2{
 	font-size: 4rem;
 	.sans{
-		font-size: 4.6rem;
+		font-size: 1.15em;
 	}
 	margin-bottom: $gutter;
 }
@@ -560,9 +563,8 @@ $goldenberry-dark: #806147;
 }
 
 #sustainability {
-	color: $driftwood;
 	padding: $gutter-large;
-
+	background: $seashell;
 	.photo{
 		width: 50%;
 		height: 200px;
@@ -575,10 +577,10 @@ $goldenberry-dark: #806147;
 		}
 	}
 	.flex{
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 	}
 	.flex-item{
-		margin-left: 1rem;
+		margin-left: 2rem;
 	}
 	h2{
 		color: $royalpalm;
@@ -649,19 +651,29 @@ $goldenberry-dark: #806147;
 }
 #afternoon{
 	// background: $royalpalm;
+	z-index: 0;
 	background-attachment: fixed;
 	background-size: 50%;
 	background-image: url('/assets/images/backgrounds/afternoon_all_boxes_orig.gif');
-	background-position: center center;
-	
-
-	display: flex;
-	align-items: center;
-
+	background-position: left top;
+	.content{
+		max-width: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100vw;
+		margin: 0;
+		top: 53%;
+		padding: 2rem;
+		background: $cacao;
+	}
 	h2{
+		font-size: 3rem;
+		margin: auto;
 		text-align: center;
-		color: $seashell;
-		@extend %textshadow;
+		color: $driftwood;
+		// @extend %textshadow;
 	}
 }
 // #afternoon-after{
@@ -776,6 +788,12 @@ footer{
 }
 
 @media (max-width: 750px){
+	header{
+		background: transparent;
+	}
+	header.open{
+		background: $seashell;
+	}
 	nav ul.menu{
 		display: none;
 	}
@@ -786,8 +804,8 @@ footer{
 	ul.menu{
 		display: none;
 		width: 100vw;
+		right: 0;
 		padding: 20px;
-		padding-bottom: 0;
 		li{
 			font-size: 26px;
 			margin-bottom: 1rem;
@@ -795,13 +813,11 @@ footer{
 	}
 	h2{
 		font-size: 3rem;
-		.sans{
-			font-size: 3.55rem;
-		}	
 	}
 
 	#intro {
-		background-size: cover;
+		width: 100vw;
+		background-size: auto 100%;
 		background-position: 40% center;
 		background-attachment: scroll;
 		padding-top: 70vh;
@@ -867,7 +883,19 @@ footer{
 			max-width: none;
 		}
 	}
+
+	#afternoon .content{
+		top: 57%;
+		h2{
+			font-size: 2rem;
+		}
+	}
 	#privacy{
 		padding: 1rem;
+	}
+}
+@media (min-width: 751px){
+	ul.menu{
+		display: flex !important;
 	}
 }
