@@ -801,23 +801,29 @@ footer{
 ///MOBILE STYLES
 .mobile-menu{
 	position: absolute;
-	right: 20px;
-	top: 20px;
+	right: 15px;
+	top: 15px;
 	display: none;
 }
 .bar{
-	width: 30px;
-	height: 5px;
+	width: 25px;
+	height: 3px;
 	margin-bottom: 3px;
 	background: $cacao;
 }
 
 @media (max-width: 750px){
+	.logo svg{
+		width: 90px;
+	}
 	header{
-		background: transparent;
+		height: 45px;
+		padding-top: .75rem;
+		// background: rgba($seashell, 0.8);
 	}
 	header.open{
-		background: $seashell;
+		height: auto;
+		// background: $seashell;
 	}
 	nav ul.menu{
 		display: none;
@@ -851,7 +857,7 @@ footer{
 		}
 		.content{
 			position: absolute;
-			height: 30vh;
+			height: 35vh;
 			width: 100vw;
 			bottom: 0;
 			background: $cacao;

@@ -471,22 +471,26 @@ footer {
 
 .mobile-menu {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 15px;
+  top: 15px;
   display: none; }
 
 .bar {
-  width: 30px;
-  height: 5px;
+  width: 25px;
+  height: 3px;
   margin-bottom: 3px;
   background: #1A1108; }
 
 @media (max-width: 750px) {
+  .logo svg {
+    width: 90px; }
+
   header {
-    background: transparent; }
+    height: 45px;
+    padding-top: .75rem; }
 
   header.open {
-    background: #F5F5F3; }
+    height: auto; }
 
   nav ul.menu {
     display: none; }
@@ -515,7 +519,7 @@ footer {
       font-size: 30px; }
     #intro .content {
       position: absolute;
-      height: 30vh;
+      height: 35vh;
       width: 100vw;
       bottom: 0;
       background: #1A1108;
