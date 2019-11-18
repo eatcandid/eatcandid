@@ -565,6 +565,7 @@ $goldenberry-dark: #806147;
 #sustainability {
 	padding: $gutter-large;
 	background: $seashell;
+	color: $royalpalm;
 	.photo{
 		width: 50%;
 		height: 200px;
@@ -820,10 +821,10 @@ footer{
 		background-size: auto 100%;
 		background-position: 40% center;
 		background-attachment: scroll;
-		padding-top: 70vh;
+		padding-top: 65vh;
 
 		.intro-text{
-			font-size: 36px;
+			font-size: 30px;
 		}
 		.content{
 			padding: 1rem;
@@ -834,8 +835,11 @@ footer{
 	}
 
 	#about{
-		padding: 1rem;
+		padding: 2rem 1rem;
 		padding-bottom: 3rem;
+		.seal{
+			width: 120px;
+		}
 		.process{
 			display: block;
 			.flex-item{
@@ -885,7 +889,7 @@ footer{
 	}
 
 	#afternoon .content{
-		top: 57%;
+		top: 53%;
 		h2{
 			font-size: 2rem;
 		}

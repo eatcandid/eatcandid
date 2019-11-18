@@ -336,7 +336,8 @@ p {
 
 #sustainability {
   padding: 6rem;
-  background: #F5F5F3; }
+  background: #F5F5F3;
+  color: #0E3220; }
   #sustainability .photo {
     width: 50%;
     height: 200px;
@@ -507,17 +508,19 @@ footer {
     background-size: auto 100%;
     background-position: 40% center;
     background-attachment: scroll;
-    padding-top: 70vh; }
+    padding-top: 65vh; }
     #intro .intro-text {
-      font-size: 36px; }
+      font-size: 30px; }
     #intro .content {
       padding: 1rem;
       color: #F5F5F3;
       text-shadow: #A0724D 3px 3px 6px; }
 
   #about {
-    padding: 1rem;
+    padding: 2rem 1rem;
     padding-bottom: 3rem; }
+    #about .seal {
+      width: 120px; }
     #about .process {
       display: block; }
       #about .process .flex-item {
@@ -557,7 +560,7 @@ footer {
       max-width: none; }
 
   #afternoon .content {
-    top: 57%; }
+    top: 53%; }
     #afternoon .content h2 {
       font-size: 2rem; }
 
