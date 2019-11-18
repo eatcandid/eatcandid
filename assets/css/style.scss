@@ -815,7 +815,7 @@ footer{
 		}
 	}
 	h2{
-		font-size: 3rem;
+		font-size: 2.8rem;
 	}
 
 	#intro {
@@ -833,8 +833,11 @@ footer{
 			width: 100vw;
 			bottom: 0;
 			background: $cacao;
-			padding: 1.5rem 2rem;
+			padding: 1.5rem 2rem 1rem;
 			color: $driftwood;
+			p, h2{
+				text-align: center;
+			}
 			// text-shadow: $driftwood 3px 3px 6px;
 		}
 		
