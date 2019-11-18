@@ -196,7 +196,7 @@ h1{
 h2{
 	font-size: 4rem;
 	.sans{
-		font-size: 1.15em;
+		font-size: 1.2em;
 	}
 	margin-bottom: $gutter;
 }
@@ -265,10 +265,17 @@ p{
 #intro {
 	background-color: $mango-dark;
 	padding-top: 200px;
-	background-attachment: fixed;
-	background-size: cover;
-	background-image: url('/assets/images/backgrounds/candid_all.jpg');
-
+	.intro-bg{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-attachment: fixed;
+		background-size: cover;
+		background-image: url('/assets/images/backgrounds/candid_all.jpg');
+	}
+	
 	h2{
 		text-align: left;
 	}
@@ -812,7 +819,28 @@ footer{
 	background: $cacao;
 }
 
-@media (max-width: 750px){
+@media (max-width: 1200px){
+	h2{
+		font-size: 3.5rem;
+	}
+	.content-text{
+		padding: 4rem 2rem;
+	}
+	.next, .break{
+		display: none;
+	}
+	#about{
+		padding: 2rem;
+	}
+	.content-image{
+		background-position: 35vw center;
+	}
+	.rightalign .content-image{
+		background-position: -16vw center;
+	}
+
+}
+@media (max-width: 800px){
 	.logo svg{
 		width: 90px;
 	}
@@ -847,22 +875,31 @@ footer{
 	}
 
 	#intro {
-		width: 100vw;
-		background-size: auto 100%;
-		background-position: 70% center;
-		background-attachment: scroll;
-
+		padding-top: 100vh;
+		.intro-bg{
+			background-size: auto 100%;
+			background-position: 70% center;
+			background-attachment: scroll;
+		}
+		
 		.intro-text{
 			font-size: 30px;
 		}
 		.content{
-			position: absolute;
-			height: 35vh;
+			display: flex;
+			align-items: center;
+			padding: 0;
+			height: 100vh;
 			width: 100vw;
 			bottom: 0;
 			background: $cacao;
-			padding: 1.5rem 2rem 1rem;
 			color: $driftwood;
+			.tagline{
+				width: 100%;
+			}
+			h2{
+				font-size: 12vw;
+			}
 			p, h2{
 				text-align: center;
 			}
@@ -886,9 +923,6 @@ footer{
 			.flex-item:first-child{
 				margin-bottom: 2rem;
 			}
-		}
-		.next, .break{
-			display: none;
 		}
 	}
 	.product .flex{
@@ -947,7 +981,7 @@ footer{
 		padding: 1rem;
 	}
 }
-@media (min-width: 751px){
+@media (min-width: 801px){
 	ul.menu{
 		display: flex !important;
 	}
