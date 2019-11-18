@@ -333,10 +333,6 @@ p {
   justify-content: center;
   animation: blink 1s ease-in-out alternate infinite; }
 
-.part2 {
-  opacity: 0;
-  animation-delay: 1s; }
-
 .svg-arrow {
   width: 70px; }
 
