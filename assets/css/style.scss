@@ -181,8 +181,6 @@ h1,h2{
 	text-transform: uppercase;
 	.sans{
 		font-weight: 100;
-		// display: block;
-		font-size: 8rem;
 		line-height: .9;
 	}
 }
@@ -196,7 +194,7 @@ h1{
 h2{
 	font-size: 4rem;
 	.sans{
-		font-size: 1.2em;
+		font-size: 1.18em;
 	}
 	margin-bottom: $gutter;
 }
@@ -264,7 +262,7 @@ p{
 
 #intro {
 	background-color: $mango-dark;
-	padding-top: 200px;
+	padding-top: 60vh;
 	.intro-bg{
 		position: absolute;
 		top: 0;
@@ -278,6 +276,7 @@ p{
 	
 	h2{
 		text-align: left;
+		font-size: 5vw;
 	}
 	p{
 		margin-bottom: 0;
@@ -285,7 +284,7 @@ p{
 	.content{
 		color: #5e2406;
 		max-width: none;
-		padding: 4rem;
+		padding-left: 4rem;
 	}
 	.intro-text{
 		line-height: 1;
@@ -574,11 +573,14 @@ p{
 
 #sustainability {
 	padding: $gutter-large;
+	.content{
+		max-width: none;
+	}
 	background: $seashell;
 	color: $royalpalm;
 	.photo{
 		width: 50%;
-		height: 200px;
+		height: 100%;
 		border-radius: 5px;
 		overflow: hidden;
 		img{
@@ -587,21 +589,32 @@ p{
 			vertical-align: middle;
 		}
 	}
-	.flex{
-		margin-bottom: 2rem;
+	.text{
+		flex: 1;
+		display: flex;
+		align-items: center;
+		padding: 0 4rem;
 	}
-	.flex-item{
-		margin-left: 2rem;
+	.flex{
+		align-items: center;
+	}
+	.flex:nth-child(2){
+		.text{
+			order: 1;
+			padding-left: 0;
+		}
+		.photo{
+			order: 2;
+		}
 	}
 	h2{
 		color: $royalpalm;
+		width: 50%;
+		margin-bottom: 2rem;
 	}
 
 	h3{
 		margin-bottom: 0;
-	}
-	p{
-		max-width: 16em;
 	}
 	// .content-image{
 	// 	background-image: url('/assets/images/backgrounds/sustainability.jpg');
@@ -763,9 +776,6 @@ footer{
 		color: $driftwood;
 		font-size: 2rem;
 		text-align: center;
-		.sans{
-			font-size: 2.2rem;
-		}
 		margin-bottom: 2rem;
 	}
 	.flex{
@@ -820,7 +830,7 @@ footer{
 		font-size: 3.5rem;
 	}
 	.content-text{
-		padding: 4rem 2rem;
+		padding: 4rem;
 	}
 	.next, .break{
 		display: none;
@@ -834,7 +844,9 @@ footer{
 	.rightalign .content-image{
 		background-position: -16vw center;
 	}
-
+	#sustainability .text{
+		padding: 2rem;
+	}
 }
 @media (max-width: 800px){
 	.logo svg{
@@ -935,26 +947,41 @@ footer{
 		background-attachment: scroll;
 		background-position: 50% 50%;
 	}
+	.content-text{
+		padding: 4rem 2rem;
+	}
 
 	.rightalign .content-image {
 		background-position: 50% 50%;
 	}
 	#sustainability{
 		padding: 4rem 2rem;
+		.photo{
+			height: 300px;
+		}
+		.text{
+			padding-left: 0;
+		}
 		.flex{
 			display: block;
 			.flex-item{
 				margin: 1rem 0 4rem;
 			}
 			.photo{
+				width: 100%;
 				height: auto;
 			}
-		}
-		.photo{
-			width: 100%;
+			&:nth-child(2){
+				.photo{
+					order: 1;
+				}	
+				.text{
+					order: 2;
+				}
+			}
 		}
 		p{
-			max-width: none;
+			max-width: 25em;
 		}
 	}
 	#afternoon{

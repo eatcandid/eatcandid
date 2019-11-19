@@ -108,7 +108,6 @@ h1, h2 {
   text-transform: uppercase; }
   h1 .sans, h2 .sans {
     font-weight: 100;
-    font-size: 8rem;
     line-height: .9; }
 
 h1 {
@@ -118,7 +117,7 @@ h2 {
   font-size: 4rem;
   margin-bottom: 1rem; }
   h2 .sans {
-    font-size: 1.2em; }
+    font-size: 1.18em; }
 
 h3 {
   text-transform: uppercase;
@@ -161,7 +160,7 @@ p {
 
 #intro {
   background-color: #945023;
-  padding-top: 200px; }
+  padding-top: 60vh; }
   #intro .intro-bg {
     position: absolute;
     top: 0;
@@ -172,13 +171,14 @@ p {
     background-size: cover;
     background-image: url("/assets/images/backgrounds/candid_all.jpg"); }
   #intro h2 {
-    text-align: left; }
+    text-align: left;
+    font-size: 5vw; }
   #intro p {
     margin-bottom: 0; }
   #intro .content {
     color: #5e2406;
     max-width: none;
-    padding: 4rem; }
+    padding-left: 4rem; }
   #intro .intro-text {
     line-height: 1;
     font-size: 40px; }
@@ -346,25 +346,35 @@ p {
   padding: 6rem;
   background: #F5F5F3;
   color: #0E3220; }
+  #sustainability .content {
+    max-width: none; }
   #sustainability .photo {
     width: 50%;
-    height: 200px;
+    height: 100%;
     border-radius: 5px;
     overflow: hidden; }
     #sustainability .photo img {
       width: 100%;
       height: auto;
       vertical-align: middle; }
+  #sustainability .text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem; }
   #sustainability .flex {
-    margin-bottom: 2rem; }
-  #sustainability .flex-item {
-    margin-left: 2rem; }
+    align-items: center; }
+  #sustainability .flex:nth-child(2) .text {
+    order: 1;
+    padding-left: 0; }
+  #sustainability .flex:nth-child(2) .photo {
+    order: 2; }
   #sustainability h2 {
-    color: #0E3220; }
+    color: #0E3220;
+    width: 50%;
+    margin-bottom: 2rem; }
   #sustainability h3 {
     margin-bottom: 0; }
-  #sustainability p {
-    max-width: 16em; }
 
 .nutrition h4 {
   font-size: 1em;
@@ -447,8 +457,6 @@ footer {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem; }
-    footer h2 .sans {
-      font-size: 2.2rem; }
   footer .flex {
     padding-top: 1rem;
     align-item: center; }
@@ -488,7 +496,7 @@ footer {
     font-size: 3.5rem; }
 
   .content-text {
-    padding: 4rem 2rem; }
+    padding: 4rem; }
 
   .next, .break {
     display: none; }
@@ -500,7 +508,10 @@ footer {
     background-position: 35vw center; }
 
   .rightalign .content-image {
-    background-position: -16vw center; } }
+    background-position: -16vw center; }
+
+  #sustainability .text {
+    padding: 2rem; } }
 @media (max-width: 800px) {
   .logo svg {
     width: 90px; }
@@ -581,21 +592,31 @@ footer {
     background-attachment: scroll;
     background-position: 50% 50%; }
 
+  .content-text {
+    padding: 4rem 2rem; }
+
   .rightalign .content-image {
     background-position: 50% 50%; }
 
   #sustainability {
     padding: 4rem 2rem; }
+    #sustainability .photo {
+      height: 300px; }
+    #sustainability .text {
+      padding-left: 0; }
     #sustainability .flex {
       display: block; }
       #sustainability .flex .flex-item {
         margin: 1rem 0 4rem; }
       #sustainability .flex .photo {
+        width: 100%;
         height: auto; }
-    #sustainability .photo {
-      width: 100%; }
+      #sustainability .flex:nth-child(2) .photo {
+        order: 1; }
+      #sustainability .flex:nth-child(2) .text {
+        order: 2; }
     #sustainability p {
-      max-width: none; }
+      max-width: 25em; }
 
   #afternoon {
     min-height: 0; }
