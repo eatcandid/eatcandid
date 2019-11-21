@@ -198,8 +198,14 @@ h2{
 	}
 	margin-bottom: $gutter;
 }
-
 h3{
+	font-family: 'Cooper Light';
+	font-weight: 300;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+h4{
 	@extend %subhead;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -220,7 +226,7 @@ h3{
 }
 
 p{
-	margin-bottom: $gutter;
+	margin-bottom: 1em;
 }
 
 .button{
@@ -234,7 +240,7 @@ p{
 	letter-spacing: 2px;
 	font-size: 1.8rem;
 	line-height: 1;
-	margin: 1.5rem 0;
+	margin: .8rem 0;
 	transition: box-shadow 200ms ease-in-out;
 
 	&:hover {
@@ -282,7 +288,7 @@ p{
 		margin-bottom: 0;
 	}
 	.content{
-		color: #5e2406;
+		color: $seashell;
 		max-width: none;
 		padding-left: 4rem;
 	}
@@ -525,9 +531,15 @@ p{
 	background: $seashell;
 	padding: $gutter-large;
 	color: $royalpalm;
-	
+	.content{
+		max-width: 1200px;
+		margin: auto;
+	}
 	p{
-		max-width: 30rem;
+		max-width: 36rem;
+		font-family: 'Cooper Light';
+		font-size: 1.5rem;
+		line-height: 1.4;
 		margin: auto;
 	}
 	.seal{
@@ -539,9 +551,23 @@ p{
 	}
 
 	.process{
-		margin: 3rem auto 1rem;
+		p{
+			font-family: 'Founders Grotesk';
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 1.2;
+		}
+		margin: 3rem auto 1rem auto;
+		.illo{
+			height: 130px;
+		}
 		img{
-			width: 100px;
+			width: 110px;
+		}
+		#pine-illo{
+			position: relative;
+			top: -10px;
+			width: 130px;
 		}
 	}
 	.caption{
@@ -609,8 +635,13 @@ p{
 	}
 	h2{
 		color: $royalpalm;
-		width: 50%;
-		margin-bottom: 2rem;
+		margin-top: 2rem;
+		margin-bottom: 7rem;
+		text-align: center;
+	}
+	h3{
+		font-family: 'Founders Grotesk';
+		font-weight: 500;
 	}
 
 	// .content-image{

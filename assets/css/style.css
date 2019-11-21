@@ -96,7 +96,7 @@ section.product {
 h1, h2 {
   font-family: 'Cooper Light', serif; }
 
-nav, h3 {
+nav, h4 {
   font-family: 'Founders Grotesk', sans-serif; }
 
 .sans {
@@ -120,6 +120,12 @@ h2 {
     font-size: 1.18em; }
 
 h3 {
+  font-family: 'Cooper Light';
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 1rem; }
+
+h4 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
@@ -135,7 +141,7 @@ h3 {
   line-height: 1.2; }
 
 p {
-  margin-bottom: 1rem; }
+  margin-bottom: 1em; }
 
 .button {
   background: #0E3220;
@@ -148,7 +154,7 @@ p {
   letter-spacing: 2px;
   font-size: 1.8rem;
   line-height: 1;
-  margin: 1.5rem 0;
+  margin: .8rem 0;
   transition: box-shadow 200ms ease-in-out; }
   .button:hover {
     -webkit-box-shadow: inset 5px 5px 8px var(--box-shadow-color);
@@ -176,7 +182,7 @@ p {
   #intro p {
     margin-bottom: 0; }
   #intro .content {
-    color: #5e2406;
+    color: #F5F5F3;
     max-width: none;
     padding-left: 4rem; }
   #intro .intro-text {
@@ -309,8 +315,14 @@ p {
   background: #F5F5F3;
   padding: 6rem;
   color: #0E3220; }
+  #about .content {
+    max-width: 1200px;
+    margin: auto; }
   #about p {
-    max-width: 30rem;
+    max-width: 36rem;
+    font-family: 'Cooper Light';
+    font-size: 1.5rem;
+    line-height: 1.4;
     margin: auto; }
   #about .seal {
     width: 160px;
@@ -318,9 +330,20 @@ p {
     #about .seal .a {
       fill: #A0724D; }
   #about .process {
-    margin: 3rem auto 1rem; }
+    margin: 3rem auto 1rem auto; }
+    #about .process p {
+      font-family: 'Founders Grotesk';
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.2; }
+    #about .process .illo {
+      height: 130px; }
     #about .process img {
-      width: 100px; }
+      width: 110px; }
+    #about .process #pine-illo {
+      position: relative;
+      top: -10px;
+      width: 130px; }
   #about .caption {
     color: #A0724D;
     width: 16em;
@@ -371,8 +394,12 @@ p {
     order: 2; }
   #sustainability h2 {
     color: #0E3220;
-    width: 50%;
-    margin-bottom: 2rem; }
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+    text-align: center; }
+  #sustainability h3 {
+    font-family: 'Founders Grotesk';
+    font-weight: 500; }
 
 .nutrition h4 {
   font-size: 1em;
