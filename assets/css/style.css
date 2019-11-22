@@ -385,6 +385,8 @@ p {
     display: flex;
     align-items: center;
     padding: 0 4rem; }
+    #sustainability .text p {
+      line-height: 1.3; }
   #sustainability .flex {
     align-items: center; }
   #sustainability .flex:nth-child(2) .text {
