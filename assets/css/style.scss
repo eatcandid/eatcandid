@@ -279,7 +279,7 @@ p{
 		background-size: cover;
 		background-image: url('/assets/images/backgrounds/candid_all.jpg');
 	}
-	
+
 	h2{
 		text-align: left;
 		font-size: 5vw;
@@ -420,7 +420,7 @@ p{
 	}
 	.nutrition{
 		color: $mango-dark;
-	}	
+	}
 }
 
 #banana {
@@ -478,7 +478,7 @@ p{
 }
 #nibs{
 	width: 250px;
-	bottom: 100px; 
+	bottom: 100px;
 	right: 100px;
 }
 
@@ -638,6 +638,7 @@ p{
 		margin-top: 2rem;
 		margin-bottom: 7rem;
 		text-align: center;
+		max-width: 20em;
 	}
 	h3{
 		font-family: 'Founders Grotesk';
@@ -716,7 +717,7 @@ p{
 	// .afternoon-bg{
 	// 	background-attachment: fixed;
 	// 	background-size: 50%;
-		
+
 	// 	background-position: left top;
 	// 	position: absolute;
 	// 	width: 100vw;
@@ -917,7 +918,7 @@ footer{
 			background-position: 70% center;
 			background-attachment: scroll;
 		}
-		
+
 		.intro-text{
 			font-size: 30px;
 		}
@@ -941,7 +942,7 @@ footer{
 			}
 			// text-shadow: $driftwood 3px 3px 6px;
 		}
-		
+
 	}
 
 	#about{
@@ -1002,7 +1003,7 @@ footer{
 			&:nth-child(2){
 				.photo{
 					order: 1;
-				}	
+				}
 				.text{
 					order: 2;
 				}
