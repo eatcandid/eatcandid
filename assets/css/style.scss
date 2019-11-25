@@ -73,6 +73,7 @@ body{
 	letter-spacing: .5px;
 	background: $seashell;
 	color: $cacao;
+	overflow-x: hidden;
 }
 
 a{
@@ -709,13 +710,13 @@ p{
 	// background: $royalpalm;
 	// z-index: 0;
 	.afternoon-bg{
-		background-image: url('/assets/images/backgrounds/afternoon_all_boxes_orig.gif');
+		background-image: url('/assets/images/backgrounds/ClockGif_WebCrop.gif');
 		position: static;
 		background-attachment: fixed;
-		background-size: 400px;
+		background-size: cover;
 		background-position: center center;
 		height: 100vh;
-		background-repeat: repeat;
+		background-repeat: no-repeat;
 	}
 	// .afternoon-bg{
 	// 	background-attachment: fixed;
