@@ -70,7 +70,6 @@ body{
 	font-family: 'Founders Grotesk', sans-serif;
 	font-size: 20px;
 	font-weight: 100;
-	letter-spacing: .5px;
 	background: $seashell;
 	color: $cacao;
 }
@@ -185,8 +184,6 @@ h1,h2{
 	}
 }
 
-
-
 h1{
 	font-size: 7rem;
 }
@@ -202,7 +199,7 @@ h3{
 	font-family: 'Cooper Light';
 	font-weight: 300;
 	font-size: 1.5rem;
-	margin-bottom: 1rem;
+	margin-bottom: .9rem;
 }
 
 h4{
@@ -220,13 +217,14 @@ h4{
 
 .summary{
 	// @extend %headline;
-	letter-spacing: 0px;
+	letter-spacing: 0;
 	font-size: $size-m;
 	line-height: 1.2;
 }
 
 p{
 	margin-bottom: 1em;
+	letter-spacing: .5px;
 }
 
 .button{
@@ -277,7 +275,7 @@ p{
 		height: 100vh;
 		background-attachment: fixed;
 		background-size: cover;
-		background-image: url('/assets/images/backgrounds/candid_all.jpg');
+		background-image: url('/assets/images/backgrounds/candid_all_2.jpg');
 	}
 
 	h2{
@@ -288,19 +286,19 @@ p{
 		margin-bottom: 0;
 	}
 	.content{
-		color: $seashell;
+		color: $cacao;
 		max-width: none;
 		padding-left: 4rem;
 	}
 	.intro-text{
 		line-height: 1;
 		font-size: 40px;
+		text-indent: 6px;
+		letter-spacing: 0;
 	}
 
 }
-.rightalign .content-image{
-	background-position: left center;
-}
+
 .product:nth-child(2n){
 	.flex{
 		.content-image{
@@ -381,12 +379,15 @@ p{
 	// display: flex;
 	// align-items: center;
 	background-attachment: fixed;
-	background-size: contain;
-	background-position: right 50%;
+	background-origin: content-box;
+	background-size: auto 100%;
+	background-position: -10vw center;
 	background-repeat: no-repeat;
 }
 
-
+.rightalign .content-image{
+	background-position: 40vw center;
+}
 
 
 #pineapple {
@@ -399,7 +400,7 @@ p{
 		background-color: $pineapple-dark;
 	}
 	.content-image{
-		background-image: url('/assets/images/products/prod-pine.jpg')
+		background-image: url('/assets/images/products/prod-pine-2.jpg');
 	}
 	--box-shadow-color: #634b83;
 	.nutrition{
@@ -416,7 +417,7 @@ p{
 		background-color: $mango-dark;
 	}
 	.content-image{
-		background-image: url('/assets/images/products/prod-mango.jpg')
+		background-image: url('/assets/images/products/prod-mango-2.jpg');
 	}
 	.nutrition{
 		color: $mango-dark;
@@ -433,7 +434,7 @@ p{
 		background-color: $banana-dark;
 	}
 	.content-image{
-		background-image: url('/assets/images/products/prod-banana.jpg')
+		background-image: url('/assets/images/products/prod-banana-2.jpg');
 	}
 	.nutrition{
 		color: $banana-dark;
@@ -451,7 +452,7 @@ p{
 		background-color: $goldenberry-dark;
 	}
 	.content-image{
-		background-image: url('/assets/images/products/prod-gb.jpg')
+		background-image: url('/assets/images/products/prod-gb-2.jpg');
 	}
 	.nutrition{
 		color: $goldenberry-dark;
@@ -572,7 +573,7 @@ p{
 	}
 	.caption{
 		color: $driftwood;
-		width: 16em;
+		max-width: 16em;
 		font-weight: 400;
 		font-size: 15px;
 	}
@@ -638,14 +639,15 @@ p{
 	}
 	h2{
 		color: $royalpalm;
+		margin: auto;
 		margin-top: 2rem;
 		margin-bottom: 7rem;
 		text-align: center;
-		max-width: 20em;
+		max-width: 19em;
 	}
-	h3{
-		font-family: 'Founders Grotesk';
-		font-weight: 500;
+	p{
+		font-family: 'Cooper Light';
+		letter-spacing: 0px;
 	}
 
 	// .content-image{
@@ -870,14 +872,23 @@ footer{
 	#about{
 		padding: 2rem;
 	}
-	.content-image{
-		background-position: 35vw center;
-	}
-	.rightalign .content-image{
-		background-position: -16vw center;
-	}
+
 	#sustainability .text{
 		padding: 2rem;
+	}
+	.content-image{
+		background-position: -16vw center;
+	}
+	.rightalign .content-image{
+		background-position: 30vw center;
+	}
+}
+@media (max-width: 1000px){
+	.content-image{
+		background-position: -36vw center;
+	}
+	.rightalign .content-image{
+		background-position: 16vw center;
 	}
 }
 @media (max-width: 800px){
@@ -924,6 +935,7 @@ footer{
 
 		.intro-text{
 			font-size: 30px;
+			text-indent: 0;
 		}
 		.content{
 			display: flex;
@@ -958,9 +970,6 @@ footer{
 			display: block;
 			.flex-item{
 				margin-right: 0;
-				margin-bottom: 1rem;
-			}
-			.flex-item:first-child{
 				margin-bottom: 2rem;
 			}
 		}

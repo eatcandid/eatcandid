@@ -31,7 +31,6 @@ body {
   font-family: 'Founders Grotesk', sans-serif;
   font-size: 20px;
   font-weight: 100;
-  letter-spacing: .5px;
   background: #F5F5F3;
   color: #1A1108; }
 
@@ -123,7 +122,7 @@ h3 {
   font-family: 'Cooper Light';
   font-weight: 300;
   font-size: 1.5rem;
-  margin-bottom: 1rem; }
+  margin-bottom: .9rem; }
 
 h4 {
   text-transform: uppercase;
@@ -136,12 +135,13 @@ h4 {
   margin: 1rem auto; }
 
 .summary {
-  letter-spacing: 0px;
+  letter-spacing: 0;
   font-size: 1.8rem;
   line-height: 1.2; }
 
 p {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  letter-spacing: .5px; }
 
 .button {
   background: #0E3220;
@@ -175,22 +175,21 @@ p {
     height: 100vh;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url("/assets/images/backgrounds/candid_all.jpg"); }
+    background-image: url("/assets/images/backgrounds/candid_all_2.jpg"); }
   #intro h2 {
     text-align: left;
     font-size: 5vw; }
   #intro p {
     margin-bottom: 0; }
   #intro .content {
-    color: #F5F5F3;
+    color: #1A1108;
     max-width: none;
     padding-left: 4rem; }
   #intro .intro-text {
     line-height: 1;
-    font-size: 40px; }
-
-.rightalign .content-image {
-  background-position: left center; }
+    font-size: 40px;
+    text-indent: 6px;
+    letter-spacing: 0; }
 
 .product:nth-child(2n) .flex .content-image {
   order: 1; }
@@ -215,9 +214,13 @@ p {
 .content-image {
   width: 50vw;
   background-attachment: fixed;
-  background-size: contain;
-  background-position: right 50%;
+  background-origin: content-box;
+  background-size: auto 100%;
+  background-position: -10vw center;
   background-repeat: no-repeat; }
+
+.rightalign .content-image {
+  background-position: 40vw center; }
 
 #pineapple {
   background: #C7BBEB;
@@ -227,7 +230,7 @@ p {
   #pineapple .content-image, #pineapple .button {
     background-color: #8061A9; }
   #pineapple .content-image {
-    background-image: url("/assets/images/products/prod-pine.jpg"); }
+    background-image: url("/assets/images/products/prod-pine-2.jpg"); }
   #pineapple .nutrition {
     color: #8061A9; }
 
@@ -239,7 +242,7 @@ p {
   #mango .content-image, #mango .button {
     background-color: #945023; }
   #mango .content-image {
-    background-image: url("/assets/images/products/prod-mango.jpg"); }
+    background-image: url("/assets/images/products/prod-mango-2.jpg"); }
   #mango .nutrition {
     color: #945023; }
 
@@ -251,7 +254,7 @@ p {
   #banana .content-image, #banana .button {
     background-color: #B5722A; }
   #banana .content-image {
-    background-image: url("/assets/images/products/prod-banana.jpg"); }
+    background-image: url("/assets/images/products/prod-banana-2.jpg"); }
   #banana .nutrition {
     color: #B5722A; }
 
@@ -263,7 +266,7 @@ p {
   #goldenberry .content-image, #goldenberry .button {
     background-color: #806147; }
   #goldenberry .content-image {
-    background-image: url("/assets/images/products/prod-gb.jpg"); }
+    background-image: url("/assets/images/products/prod-gb-2.jpg"); }
   #goldenberry .nutrition {
     color: #806147; }
 
@@ -346,7 +349,7 @@ p {
       width: 130px; }
   #about .caption {
     color: #A0724D;
-    width: 16em;
+    max-width: 16em;
     font-weight: 400;
     font-size: 15px; }
 
@@ -396,13 +399,14 @@ p {
     order: 2; }
   #sustainability h2 {
     color: #0E3220;
+    margin: auto;
     margin-top: 2rem;
     margin-bottom: 7rem;
     text-align: center;
-    max-width: 20em; }
-  #sustainability h3 {
-    font-family: 'Founders Grotesk';
-    font-weight: 500; }
+    max-width: 19em; }
+  #sustainability p {
+    font-family: 'Cooper Light';
+    letter-spacing: 0px; }
 
 .nutrition h4 {
   font-size: 1em;
@@ -533,14 +537,20 @@ footer {
   #about {
     padding: 2rem; }
 
-  .content-image {
-    background-position: 35vw center; }
+  #sustainability .text {
+    padding: 2rem; }
 
-  .rightalign .content-image {
+  .content-image {
     background-position: -16vw center; }
 
-  #sustainability .text {
-    padding: 2rem; } }
+  .rightalign .content-image {
+    background-position: 30vw center; } }
+@media (max-width: 1000px) {
+  .content-image {
+    background-position: -36vw center; }
+
+  .rightalign .content-image {
+    background-position: 16vw center; } }
 @media (max-width: 800px) {
   .logo svg {
     width: 90px; }
@@ -577,7 +587,8 @@ footer {
       background-position: 70% center;
       background-attachment: scroll; }
     #intro .intro-text {
-      font-size: 30px; }
+      font-size: 30px;
+      text-indent: 0; }
     #intro .content {
       display: flex;
       align-items: center;
@@ -603,8 +614,6 @@ footer {
       display: block; }
       #about .process .flex-item {
         margin-right: 0;
-        margin-bottom: 1rem; }
-      #about .process .flex-item:first-child {
         margin-bottom: 2rem; }
 
   .product .flex {
