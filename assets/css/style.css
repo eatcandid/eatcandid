@@ -42,7 +42,6 @@ img {
   width: 100%; }
 
 header {
-  padding: 1rem;
   margin-bottom: 0;
   width: 100%;
   position: fixed;
@@ -50,6 +49,7 @@ header {
   z-index: 100;
   background: #F5F5F3; }
   header .logo {
+    padding: 1rem;
     display: inline-block; }
     header .logo svg a {
       fill: #1A1108; }
@@ -58,12 +58,14 @@ header {
   width: 130px; }
 
 nav {
+  background: #F5F5F3;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
   float: right;
   padding-top: 3px; }
   nav ul.menu {
+    padding: 1rem;
     display: flex;
     list-style-type: none; }
   nav li {
@@ -495,11 +497,11 @@ footer {
     align-item: center; }
   footer .social {
     margin-top: 1rem; }
-  footer .social a {
-    display: inline-block;
-    margin-right: 15px; }
+    footer .social a {
+      display: inline-block; }
   footer #insta-icon {
-    width: 20px; }
+    width: 20px;
+    margin-right: 15px; }
   footer #facebook {
     width: 20px; }
   footer .ig-fill {
@@ -558,9 +560,16 @@ footer {
   header {
     height: 45px;
     padding-top: .75rem; }
+    header .logo {
+      padding: 0;
+      padding-left: 15px; }
 
   header.open {
     height: auto; }
+
+  nav {
+    float: none;
+    display: block; }
 
   nav ul.menu {
     display: none; }
@@ -572,10 +581,11 @@ footer {
     display: none;
     width: 100%;
     right: 0;
-    padding: 20px; }
+    padding: 20px 0; }
     ul.menu li {
       font-size: 26px;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      padding-left: 0; }
 
   h2 {
     font-size: 2.8rem; }
@@ -606,7 +616,7 @@ footer {
         text-align: center; }
 
   #about {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     padding-bottom: 3rem; }
     #about .seal {
       width: 120px; }
