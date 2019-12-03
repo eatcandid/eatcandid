@@ -218,11 +218,11 @@ p {
   background-attachment: fixed;
   background-origin: content-box;
   background-size: auto 100%;
-  background-position: -10vw center;
+  background-position: -15vw center;
   background-repeat: no-repeat; }
 
 .rightalign .content-image {
-  background-position: 40vw center; }
+  background-position: 35vw center; }
 
 #pineapple {
   background: #C7BBEB;
@@ -403,7 +403,7 @@ p {
     color: #0E3220;
     margin: auto;
     margin-top: 2rem;
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
     text-align: center;
     max-width: 19em; }
   #sustainability h3 {
@@ -546,7 +546,7 @@ footer {
     padding: 2rem; }
 
   .content-image {
-    background-position: -16vw center; }
+    background-position: -19vw center; }
 
   .rightalign .content-image {
     background-position: 30vw center; } }
