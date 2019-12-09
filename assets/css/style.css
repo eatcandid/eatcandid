@@ -654,7 +654,8 @@ footer {
     #sustainability .photo {
       height: 300px; }
     #sustainability .text {
-      padding-left: 0; }
+      padding-left: 0;
+      padding-right: 0; }
     #sustainability .flex {
       display: block; }
       #sustainability .flex .flex-item {
